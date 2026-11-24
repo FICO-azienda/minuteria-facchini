@@ -45,7 +45,7 @@ export function Hero() {
           <div className={styles.frame}>
             <Picture
               id="hero/pezzo"
-              sizes="(max-width: 900px) 100vw, 46vw"
+              sizes="(max-width: 820px) calc(100vw - 72px), (max-width: 1180px) 38vw, 28vw"
               priority
               fill
               className={styles.picture}

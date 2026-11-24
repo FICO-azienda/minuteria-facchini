@@ -133,11 +133,24 @@
   .cellWide {
     grid-column: 1 / -1;
   }
+
+  .cartiglio > div:last-child {
+    grid-column: span 2;
+    border-bottom: 0;
+  }
+
+  .cartiglio > div:nth-last-child(2) {
+    border-bottom: 0;
+  }
 }
 
 @media (max-width: 560px) {
   .top {
     grid-template-columns: 1fr;
+  }
+
+  .cartiglio > div:last-child {
+    grid-column: 1 / -1;
   }
 
   .cartiglio {

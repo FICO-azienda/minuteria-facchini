@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useId, useRef, useState, type ChangeEvent, type DragEvent, type FormEvent } from "react";
+import { flushSync } from "react-dom";
 import { site } from "@/lib/site";
 import styles from "./ContactForm.module.css";
 
@@ -129,10 +130,14 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
     // Honeypot: un utente reale non compila questo campo nascosto.
-    if (String(data.get("sito_web") ?? "")) return;
+    if (String(data.get("sito_web") ?? "")) {
+      setStatus("sent");
+      return;
+    }
 
     const errs = validate(data);
-    setErrors(errs);
+    // Gli attributi di errore devono essere già nel DOM quando il campo riceve il focus.
+    flushSync(() => setErrors(errs));
     if (Object.keys(errs).some((k) => errs[k as keyof Errors])) {
       focusFirstError(errs);
       return;

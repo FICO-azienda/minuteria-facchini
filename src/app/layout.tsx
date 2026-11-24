@@ -11,15 +11,16 @@ import "./globals.css";
 // I font sono scaricati in fase di build e serviti dal sito stesso:
 // nessuna richiesta a server di terze parti dal browser del visitatore.
 const archivo = Archivo({
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   axes: ["wdth"],
   variable: "--font-archivo",
   display: "swap",
 });
 
+// Del Newsreader si usa solo il corsivo.
 const newsreader = Newsreader({
-  subsets: ["latin", "latin-ext"],
-  style: ["normal", "italic"],
+  subsets: ["latin"],
+  style: ["italic"],
   axes: ["opsz"],
   variable: "--font-newsreader",
   display: "swap",
@@ -74,7 +75,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Le animazioni di ingresso partono solo se JS è attivo. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.replace('no-js','js')",
+            __html:
+              "document.documentElement.classList.replace('no-js','js');" +
+              // Rete di sicurezza: se il JavaScript non parte entro 2,5 s, si mostra tutto.
+              "setTimeout(function(){if(!window.__reveal)document.documentElement.classList.add('reveal-all')},2500)",
           }}
         />
       </head>

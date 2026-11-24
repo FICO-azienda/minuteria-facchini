@@ -44,7 +44,7 @@ export function Capabilities() {
                     →
                   </span>
                   <span className={styles.thumb} aria-hidden="true">
-                    <Picture id={c.image} sizes="(max-width: 900px) 100vw, 34vw" fill alt="" />
+                    <Picture id={c.image} sizes="(max-width: 900px) 92px, 22vw" fill alt="" />
                   </span>
                 </Link>
               </li>

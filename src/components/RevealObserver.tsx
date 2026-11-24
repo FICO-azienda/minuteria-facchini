@@ -13,6 +13,7 @@ export function RevealObserver() {
   const pathname = usePathname();
 
   useEffect(() => {
+    (window as Window & { __reveal?: boolean }).__reveal = true;
     const els = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]:not(.is-in)"));
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("is-in"));

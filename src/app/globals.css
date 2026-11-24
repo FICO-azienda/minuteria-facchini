@@ -339,8 +339,8 @@ p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   pointer-events: none;
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .img-tag[data-origin="aziendale"] {
@@ -358,4 +358,17 @@ p {
     transition-delay: 0ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Rete di sicurezza: JavaScript non partito, tutto visibile */
+.reveal-all [data-reveal],
+.reveal-all [data-reveal] .line > span,
+.reveal-all [data-reveal] > :first-child,
+.reveal-all [data-reveal] figcaption,
+.reveal-all [data-reveal="dim"] > span,
+.reveal-all [data-reveal="ruler"] span,
+.reveal-all [data-reveal="ruler"] li > * {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
 }

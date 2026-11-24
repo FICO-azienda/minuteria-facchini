@@ -21,8 +21,15 @@ export function SiteHeader() {
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 24);
-      setHidden(y > 320 && y > lastY.current + 4);
-      if (y < lastY.current - 4 || y < 320) setHidden(false);
+      if (y < 320) {
+        setHidden(false);
+        lastY.current = y;
+        return;
+      }
+      // Cambia stato solo oltre una soglia: niente sfarfallio con lo scroll lento.
+      const dy = y - lastY.current;
+      if (Math.abs(dy) < 8) return;
+      setHidden(dy > 0);
       lastY.current = y;
     };
     onScroll();
@@ -44,29 +51,36 @@ export function SiteHeader() {
     const prev = body.style.overflow;
     body.style.overflow = "hidden";
     const panel = panelRef.current;
-    const focusables = panel?.querySelectorAll<HTMLElement>("a, button");
-    focusables?.[0]?.focus();
+    const toggle = toggleRef.current;
+    // Ciclo del focus: pulsante Menu/Chiudi + voci del pannello.
+    const items = [toggle, ...Array.from(panel?.querySelectorAll<HTMLElement>("a, button") ?? [])].filter(
+      (el): el is HTMLElement => !!el,
+    );
+    items[1]?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
-        toggleRef.current?.focus();
+        toggle?.focus();
+        return;
       }
-      if (e.key === "Tab" && focusables && focusables.length) {
-        const first = focusables[0];
-        const last = focusables[focusables.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          toggleRef.current?.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          toggleRef.current?.focus();
-        }
-      }
+      if (e.key !== "Tab" || items.length < 2) return;
+      const i = items.indexOf(document.activeElement as HTMLElement);
+      if (i === -1) return;
+      e.preventDefault();
+      const next = (i + (e.shiftKey ? -1 : 1) + items.length) % items.length;
+      items[next].focus();
+    };
+    // Se la finestra si allarga oltre il breakpoint il pannello sparisce: chiudiamo il menu.
+    const mq = window.matchMedia("(min-width: 1081px)");
+    const onMq = (e: MediaQueryListEvent) => {
+      if (e.matches) setOpen(false);
     };
     document.addEventListener("keydown", onKey);
+    mq.addEventListener("change", onMq);
     return () => {
       body.style.overflow = prev;
       document.removeEventListener("keydown", onKey);
+      mq.removeEventListener("change", onMq);
     };
   }, [open]);
 
