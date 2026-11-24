@@ -1,0 +1,302 @@
+[
+  {
+    "id": "hero/pezzo",
+    "src": "stock/stock_machined-part-on-technical-drawing_unsplash-SRqJ3eli-4I.jpg",
+    "alt": "Un particolare metallico lavorato appoggiato sul proprio disegno tecnico",
+    "origin": "illustrativa",
+    "focus": "44% 55%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/SRqJ3eli-4I",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "storia/roberto",
+    "src": "archive/roberto_300.jpg",
+    "alt": "Roberto Facchini in barca, con il mare alle spalle",
+    "origin": "aziendale",
+    "focus": "50% 40%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/piastra-marcata",
+    "src": "archive/slide1.jpg",
+    "alt": "Piastra metallica forata con la scritta facchinimario.it Made in Italy incisa al laser",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/anelli-colorati",
+    "src": "archive/slide2.jpg",
+    "alt": "Anelli e maglie in filo metallico piegato, colorati in rosso e azzurro",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/anelli",
+    "src": "archive/minuterie_facchini_8585.jpg",
+    "alt": "Anelli, maglie a D e triangoli in filo metallico, al naturale e colorati",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/anelli-nero",
+    "src": "archive/minuterie_facchini_8505.jpg",
+    "alt": "Anelli e triangoli in filo d'acciaio piegato su fondo nero",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/sostegni-stoppino",
+    "src": "archive/cereria_facchini_8726.jpg",
+    "alt": "Fermagli metallici per gli stoppini delle candele",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/carboncini",
+    "src": "archive/cereria_carboncini_e_bruciaincenso_499.jpg",
+    "alt": "Confezioni di carboncini per turibolo e un bruciaincenso in metallo",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "archivio/marcatura",
+    "src": "archive/marcatura_650.jpg",
+    "alt": "Dettaglio di una piastra metallica marcata al laser",
+    "origin": "aziendale",
+    "focus": "50% 50%",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*"
+  },
+  {
+    "id": "lavorazioni/commissione",
+    "src": "stock/stock_turned-bushings-rows_unsplash-C2S_2gmmQlw.jpg",
+    "alt": "File ordinate di boccole metalliche tornite",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/C2S_2gmmQlw",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/metallo",
+    "src": "stock/stock_lathe-turning-steel-closeup_unsplash-xNDB0o4_m-Q.jpg",
+    "alt": "Un pezzo d'acciaio in lavorazione sul tornio",
+    "origin": "illustrativa",
+    "focus": "55% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/xNDB0o4_m-Q",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/marcatura",
+    "src": "stock/stock_laser-engraving-head-closeup_pexels-7254420.jpg",
+    "alt": "Testa di una macchina di marcatura laser al lavoro",
+    "origin": "illustrativa",
+    "focus": "50% 60%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/7254420/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/colore",
+    "src": "stock/stock_bronze-anodized-belay-rope_pexels-5916215.jpg",
+    "alt": "Moschettone in metallo colorato bronzo con una corda verde",
+    "origin": "illustrativa",
+    "focus": "50% 45%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/5916215/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/sviluppo",
+    "src": "stock/stock_technical-drawing-metal-ruler_pexels-38908429.jpg",
+    "alt": "Disegno tecnico quotato con una riga metallica",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/38908429/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/misura",
+    "src": "stock/stock_caliper-on-lathe_pexels-16630111.jpg",
+    "alt": "Un calibro appoggiato sul carrello di un tornio",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/16630111/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/fresatura",
+    "src": "stock/stock_cnc-milling-coolant-warm_unsplash-8MBTn3Z71zI.jpg",
+    "alt": "Fresa a controllo numerico che lavora un pezzo d'alluminio",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/8MBTn3Z71zI",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/taglio-laser",
+    "src": "stock/stock_laser-cutting-sheet-sparks_unsplash-CxGLY283rWs.jpg",
+    "alt": "Taglio laser di una lamiera",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/CxGLY283rWs",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "lavorazioni/officina",
+    "src": "stock/stock_workshop-interior-lathe-window_pexels-27348514.jpg",
+    "alt": "Interno di un'officina con un tornio vicino alla finestra",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/27348514/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/subacquea",
+    "src": "stock/stock_freediver-deep-blue-rays_unsplash-RTtUA2iBwRw.jpg",
+    "alt": "Un apneista scende nel blu tra i raggi di luce",
+    "origin": "illustrativa",
+    "focus": "50% 45%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/RTtUA2iBwRw",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/subacquea-apnea",
+    "src": "stock/stock_freediver-silhouette_unsplash-DT4S4fCze9s.jpg",
+    "alt": "Sagoma di un apneista che risale verso la luce",
+    "origin": "illustrativa",
+    "focus": "50% 40%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/DT4S4fCze9s",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/neve",
+    "src": "stock/stock_alpine-ski-course-gates-aerial_pexels-39439688.jpg",
+    "alt": "Tracciato di gara visto dall'alto, segnato dalle porte di slalom",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/39439688/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/soccorso",
+    "src": "stock/stock_fire-hoses-couplings-stowed_unsplash-OhipBwuII2I.jpg",
+    "alt": "Manichette antincendio arrotolate con i raccordi metallici",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/OhipBwuII2I",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/difesa",
+    "src": "stock/stock_hands-caliper-measuring-metal_pexels-3621231.jpg",
+    "alt": "Mani che controllano la misura di un pezzo metallico con il calibro",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Pexels · Licenza Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/3621231/",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/cererie",
+    "src": "stock/stock_church-candles-brass-holder_unsplash-WrL6kj_HVgo.jpg",
+    "alt": "Candele accese su un candelabro in ottone",
+    "origin": "illustrativa",
+    "focus": "50% 55%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/WrL6kj_HVgo",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "settori/industria",
+    "src": "stock/stock_steel-springs-bw-macro_unsplash-MrjCNYLcTpQ.jpg",
+    "alt": "Molle in filo d'acciaio in primo piano",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/MrjCNYLcTpQ",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "luoghi/lecco",
+    "src": "stock/stock_lecco-lakefront-mountain_unsplash-wSr2HkPlirs.jpg",
+    "alt": "Il lungolago di Lecco e le montagne alle spalle",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/wSr2HkPlirs",
+    "grade": {
+      "saturation": 0.86
+    }
+  },
+  {
+    "id": "luoghi/lago",
+    "src": "stock/stock_lecco-piani-erna-lake-view_unsplash-gerJ958P7mg.jpg",
+    "alt": "Il lago di Lecco visto dai Piani d'Erna",
+    "origin": "illustrativa",
+    "focus": "50% 50%",
+    "credit": "Unsplash · Licenza Unsplash",
+    "sourceUrl": "https://unsplash.com/photos/gerJ958P7mg",
+    "grade": {
+      "saturation": 0.86
+    }
+  }
+]

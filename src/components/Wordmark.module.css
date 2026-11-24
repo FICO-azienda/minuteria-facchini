@@ -1,0 +1,51 @@
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1;
+}
+
+.symbol {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  transition: transform 900ms var(--ease-out);
+}
+
+a:hover .symbol {
+  transform: rotate(90deg);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.top {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.bottom {
+  font-size: 1.32rem;
+  font-weight: 520;
+  font-variation-settings: "wdth" 118;
+  letter-spacing: -0.035em;
+}
+
+.mark[data-size="lg"] .symbol {
+  width: 56px;
+  height: 56px;
+}
+
+.mark[data-size="lg"] .top {
+  font-size: 0.8rem;
+}
+
+.mark[data-size="lg"] .bottom {
+  font-size: 2.1rem;
+}

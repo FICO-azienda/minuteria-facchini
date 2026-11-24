@@ -1,0 +1,154 @@
+.footer {
+  padding: clamp(72px, 9vw, 140px) 0 28px;
+  background: var(--oxide-deep);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px var(--gutter);
+  padding-bottom: clamp(56px, 7vw, 110px);
+}
+
+.brand {
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}
+
+.claim {
+  font-size: var(--fs-4);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  max-width: 22ch;
+}
+
+.claim em {
+  color: var(--copper-glow);
+}
+
+.col {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.col :global(.label) {
+  color: var(--sand);
+}
+
+.col ul {
+  display: grid;
+  gap: 6px;
+}
+
+.col a {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0% 1px no-repeat;
+  transition: background-size 450ms var(--ease-out), color 300ms ease;
+}
+
+.col a:hover {
+  background-size: 100% 1px;
+}
+
+.col address {
+  font-style: normal;
+}
+
+.mapLink,
+.formLink {
+  color: var(--copper-glow);
+}
+
+.cartiglio {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+  margin: 0;
+  border: 1px solid rgb(238 232 220 / 0.28);
+}
+
+.cartiglio > div {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px 16px;
+  border-right: 1px solid rgb(238 232 220 / 0.28);
+}
+
+.cartiglio > div:last-child {
+  border-right: 0;
+}
+
+.cartiglio dt {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+
+.cartiglio dd {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 22px;
+  font-size: 0.82rem;
+  color: var(--sand);
+}
+
+.bottom ul {
+  display: flex;
+  gap: 24px;
+}
+
+.bottom a:hover {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1080px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .cartiglio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cartiglio > div {
+    border-bottom: 1px solid rgb(238 232 220 / 0.28);
+  }
+
+  .cellWide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .cartiglio {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cartiglio > div:nth-child(2n + 1):not(.cellWide) {
+    border-right: 1px solid rgb(238 232 220 / 0.28);
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+}

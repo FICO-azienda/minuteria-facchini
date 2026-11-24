@@ -1,0 +1,95 @@
+.dim {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--ink-soft);
+  --line-color: currentColor;
+}
+
+.tick {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  background: var(--line-color);
+}
+
+.seg {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: var(--line-color);
+  transform-origin: center;
+}
+
+.head {
+  position: absolute;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+}
+
+.left .head {
+  left: 0;
+}
+
+.right .head {
+  right: 0;
+}
+
+.value {
+  flex: none;
+  padding: 0 14px;
+  white-space: nowrap;
+}
+
+.vertical {
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+}
+
+.vertical .tick {
+  width: 18px;
+  height: 1px;
+}
+
+.vertical .seg {
+  width: 1px;
+  height: auto;
+}
+
+.vertical .value {
+  padding: 12px 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .dim .seg {
+    transition: transform 1400ms var(--ease-in-out);
+    transition-delay: var(--delay, 0ms);
+  }
+
+  :global(.js) .dim .value {
+    transition: opacity 600ms ease 700ms;
+  }
+
+  :global(.js) .dim:not(:global(.is-in)) .left {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  :global(.js) .dim:not(:global(.is-in)) .right {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  :global(.js) .vertical:not(:global(.is-in)) .left,
+  :global(.js) .vertical:not(:global(.is-in)) .right {
+    transform: scaleY(0);
+  }
+
+  :global(.js) .dim:not(:global(.is-in)) .value {
+    opacity: 0;
+  }
+}

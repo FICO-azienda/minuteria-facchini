@@ -1,0 +1,76 @@
+.band {
+  position: relative;
+  overflow: hidden;
+  padding: var(--section) 0;
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.inner > :global(.label) {
+  color: var(--copper-glow);
+}
+
+.mark {
+  position: absolute;
+  right: calc(var(--pad) * -1 - 6vw);
+  top: 50%;
+  width: min(54vw, 720px);
+  height: auto;
+  transform: translateY(-50%);
+  color: rgb(238 232 220 / 0.09);
+  pointer-events: none;
+}
+
+.title {
+  font-size: var(--fs-mega);
+  max-width: 14ch;
+}
+
+.title em {
+  color: var(--copper-glow);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px var(--gutter);
+  align-items: end;
+}
+
+.text {
+  grid-column: 1 / span 6;
+  color: var(--sand);
+  max-width: 44ch;
+}
+
+.actions {
+  grid-column: 8 / -1;
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+}
+
+.direct {
+  display: grid;
+  gap: 4px;
+  font-size: 1.15rem;
+}
+
+.direct :global(.label) {
+  color: var(--sand);
+}
+
+.direct:hover {
+  color: var(--copper-glow);
+}
+
+@media (max-width: 900px) {
+  .text,
+  .actions {
+    grid-column: 1 / -1;
+  }
+}

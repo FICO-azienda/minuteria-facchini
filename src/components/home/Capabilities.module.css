@@ -1,0 +1,160 @@
+.section {
+  padding: var(--section) 0;
+}
+
+.layout {
+  position: relative;
+  margin-top: clamp(56px, 7vw, 112px);
+}
+
+.list {
+  width: 62%;
+  border-top: 1px solid var(--ink);
+}
+
+.item {
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr) auto;
+  grid-template-areas:
+    "n name arrow"
+    "n short arrow";
+  column-gap: 18px;
+  row-gap: 6px;
+  padding: 26px 0 28px;
+  transition: padding 500ms var(--ease-out), color 300ms ease;
+}
+
+.n {
+  grid-area: n;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  padding-top: 0.75em;
+}
+
+.name {
+  grid-area: name;
+  font-size: var(--fs-3);
+  font-weight: 340;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.short {
+  grid-area: short;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.arrow {
+  grid-area: arrow;
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease, transform 500ms var(--ease-out);
+}
+
+.row:hover,
+.row:focus-visible {
+  padding-left: 14px;
+}
+
+.row:hover .name,
+.row:focus-visible .name {
+  color: var(--copper);
+}
+
+.row:hover .arrow,
+.row:focus-visible .arrow {
+  background: var(--copper-strong);
+  border-color: var(--copper-strong);
+  color: var(--paper);
+  transform: rotate(-45deg);
+}
+
+/* Finestra immagine: tutte le immagini occupano la stessa area a destra,
+   si vede solo quella della riga attiva (la prima, se nessuna è attiva). */
+.thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 33%;
+  overflow: hidden;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 800ms var(--ease-in-out);
+}
+
+.thumb :global(picture) {
+  position: absolute;
+  inset: 0;
+}
+
+.thumb :global(img) {
+  transform: scale(1.08);
+  transition: transform 1400ms var(--ease-out);
+}
+
+.row:hover .thumb,
+.row:focus-visible .thumb,
+.list:not(:hover):not(:focus-within) .item:first-child .thumb {
+  clip-path: inset(0 0 0 0);
+}
+
+.row:hover .thumb :global(img),
+.row:focus-visible .thumb :global(img) {
+  transform: scale(1);
+}
+
+.more {
+  margin-top: clamp(40px, 5vw, 72px);
+}
+
+@media (max-width: 900px) {
+  .list {
+    width: 100%;
+  }
+
+  .row {
+    grid-template-columns: 2.4rem minmax(0, 1fr) 92px;
+    grid-template-areas:
+      "n name thumb"
+      "n short thumb";
+    align-items: start;
+    padding: 22px 0;
+  }
+
+  .row:hover,
+  .row:focus-visible {
+    padding-left: 0;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .thumb,
+  .list:not(:hover):not(:focus-within) .item:first-child .thumb {
+    grid-area: thumb;
+    position: relative;
+    inset: auto;
+    width: 92px;
+    height: 92px;
+    clip-path: none;
+  }
+
+  .thumb :global(img) {
+    transform: none;
+  }
+}

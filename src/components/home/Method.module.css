@@ -1,0 +1,186 @@
+.section {
+  padding: var(--section) 0;
+}
+
+.ruler {
+  position: relative;
+  margin-top: clamp(64px, 8vw, 128px);
+}
+
+.scale {
+  position: relative;
+  height: 56px;
+  border: 1px solid var(--ink);
+  border-bottom: 0;
+  background: rgb(255 255 255 / 0.28);
+}
+
+/* Tacche millimetriche: piccole ogni 8 px, medie ogni 40, grandi ogni 80 */
+.ticks {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 80px) 0 0 / 100% 26px no-repeat,
+    repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 40px) 0 0 / 100% 18px no-repeat,
+    repeating-linear-gradient(90deg, var(--line-strong) 0 1px, transparent 1px 8px) 0 0 / 100% 10px no-repeat;
+  transform-origin: left;
+}
+
+.zero {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.phases {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+}
+
+.phase {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 34px 28px 0 0;
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: -58px;
+  width: 2px;
+  height: 92px;
+  background: var(--copper);
+  transform-origin: top;
+}
+
+.marker::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--copper);
+}
+
+.phase {
+  padding-left: 22px;
+}
+
+.n {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--copper);
+}
+
+.verb {
+  font-size: var(--fs-3);
+  font-weight: 340;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.lead {
+  color: var(--ink-soft);
+  max-width: 30ch;
+}
+
+.more {
+  margin-top: clamp(48px, 6vw, 88px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .ruler .ticks {
+    transition: transform 1600ms var(--ease-in-out);
+  }
+
+  :global(.js) .ruler:not(:global(.is-in)) .ticks {
+    transform: scaleX(0);
+  }
+
+  :global(.js) .ruler .marker {
+    transition: transform 700ms var(--ease-out);
+    transition-delay: calc(700ms + var(--i) * 220ms);
+  }
+
+  :global(.js) .ruler:not(:global(.is-in)) .marker {
+    transform: scaleY(0);
+  }
+
+  :global(.js) .ruler .phase > :not(.marker) {
+    transition: opacity 700ms ease, transform 700ms var(--ease-out);
+    transition-delay: calc(850ms + var(--i) * 220ms);
+  }
+
+  :global(.js) .ruler:not(:global(.is-in)) .phase > :not(.marker) {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (max-width: 900px) {
+  .scale {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 44px;
+    height: auto;
+    border: 1px solid var(--ink);
+    border-right: 0;
+  }
+
+  .ticks {
+    background:
+      repeating-linear-gradient(180deg, var(--ink) 0 1px, transparent 1px 80px) 0 0 / 22px 100% no-repeat,
+      repeating-linear-gradient(180deg, var(--ink) 0 1px, transparent 1px 40px) 0 0 / 15px 100% no-repeat,
+      repeating-linear-gradient(180deg, var(--line-strong) 0 1px, transparent 1px 8px) 0 0 / 8px 100% no-repeat;
+    transform-origin: top;
+  }
+
+  :global(.js) .ruler:not(:global(.is-in)) .ticks {
+    transform: scaleY(0);
+  }
+
+  .zero {
+    display: none;
+  }
+
+  .phases {
+    grid-template-columns: 1fr;
+    margin-left: 44px;
+    border-top: 0;
+    border-left: 1px solid var(--ink);
+  }
+
+  .phase {
+    padding: 26px 0 30px 28px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .marker {
+    left: -46px;
+    top: 34px;
+    width: 64px;
+    height: 2px;
+    transform-origin: left;
+  }
+
+  .marker::after {
+    left: auto;
+    right: -4px;
+    bottom: -4px;
+  }
+
+  :global(.js) .ruler:not(:global(.is-in)) .marker {
+    transform: scaleX(0);
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+.env*.local
+
+# Originali stock a piena risoluzione: si versionano solo le copie ridotte
+assets-source/stock/*.jpg
+!assets-source/stock/masters/

@@ -1,0 +1,172 @@
+.section {
+  padding: var(--section) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: clamp(56px, 7vw, 112px);
+}
+
+.head {
+  grid-column: 1 / span 8;
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}
+
+.meta {
+  color: var(--sand);
+}
+
+.index {
+  color: var(--copper-glow);
+  margin-right: 10px;
+}
+
+.title {
+  font-size: var(--fs-1);
+}
+
+.title em {
+  color: var(--copper-glow);
+}
+
+.portrait {
+  grid-column: 10 / -1;
+  align-self: end;
+  justify-self: end;
+  width: min(100%, 300px);
+  padding: 12px 12px 0;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+}
+
+.portrait :global(img) {
+  filter: grayscale(0.15) contrast(1.02);
+}
+
+.caption {
+  display: grid;
+  gap: 2px;
+  padding: 12px 2px 14px;
+  font-size: 0.9rem;
+}
+
+.caption :global(.label) {
+  color: var(--copper);
+  font-size: 0.64rem;
+}
+
+.portrait .caption :global(.label) {
+  color: var(--copper-strong);
+}
+
+.chapters {
+  grid-column: 1 / span 6;
+  display: grid;
+  gap: 0;
+}
+
+.chapter {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  column-gap: 20px;
+  row-gap: 8px;
+  padding: 26px 0 30px;
+  border-top: 1px solid var(--line);
+  color: var(--sand);
+  line-height: 1.65;
+}
+
+.chapter p {
+  grid-column: 2;
+  max-width: 48ch;
+}
+
+.n {
+  grid-row: span 2;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--copper-glow);
+  padding-top: 0.5em;
+}
+
+.chapterTitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-3);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  font-variation-settings: "opsz" 60;
+}
+
+.archive {
+  grid-column: 8 / -1;
+  align-self: start;
+  margin-top: 26px;
+}
+
+.archive :global(picture) {
+  border: 1px solid var(--line);
+}
+
+.archive .caption {
+  color: var(--sand);
+  padding-top: 14px;
+}
+
+.archive .caption :global(.label) {
+  color: var(--copper-glow);
+}
+
+.more {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1000px) {
+  .head {
+    grid-column: 1 / span 12;
+  }
+
+  .portrait {
+    grid-column: 1 / span 6;
+    justify-self: start;
+  }
+
+  .chapters {
+    grid-column: 1 / -1;
+  }
+
+  .archive {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .portrait {
+    grid-column: 1 / span 9;
+  }
+
+  .chapter {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter p,
+  .n {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .n {
+    padding-top: 0;
+  }
+}

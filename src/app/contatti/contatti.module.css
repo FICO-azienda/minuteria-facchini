@@ -1,0 +1,98 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 64px;
+  padding-top: 24px;
+  padding-bottom: var(--section);
+  border-top: 1px solid var(--ink);
+}
+
+.formCol {
+  grid-column: 1 / span 7;
+  display: grid;
+  gap: 28px;
+  align-content: start;
+  padding-top: 28px;
+}
+
+.colTitle :global(.label) {
+  color: var(--copper);
+}
+
+.info {
+  grid-column: 9 / -1;
+  display: grid;
+  gap: 0;
+  align-content: start;
+  padding-top: 28px;
+}
+
+.block {
+  display: grid;
+  gap: 10px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.block:first-child {
+  padding-top: 0;
+}
+
+.block > :global(.label) {
+  color: var(--ink-soft);
+}
+
+.big {
+  font-size: var(--fs-4);
+  font-weight: 450;
+  letter-spacing: -0.015em;
+  word-break: break-word;
+  transition: color 300ms ease;
+}
+
+.big:hover {
+  color: var(--copper);
+}
+
+.block address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.small {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.coords {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--copper);
+}
+
+.maps {
+  display: grid;
+  gap: 6px;
+}
+
+.maps a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.maps a:hover {
+  color: var(--copper);
+}
+
+@media (max-width: 960px) {
+  .formCol,
+  .info {
+    grid-column: 1 / -1;
+  }
+
+  .info {
+    order: -1;
+  }
+}

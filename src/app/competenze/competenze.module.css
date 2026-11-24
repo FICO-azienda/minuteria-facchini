@@ -1,0 +1,178 @@
+.toc {
+  padding-bottom: clamp(48px, 6vw, 88px);
+}
+
+.toc ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink);
+}
+
+.toc a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.toc a :global(.label) {
+  color: var(--copper);
+}
+
+.toc a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.toc a:hover :global(.label) {
+  color: var(--copper-glow);
+}
+
+.list {
+  display: grid;
+  gap: clamp(96px, 12vw, 200px);
+  padding-bottom: var(--section);
+}
+
+.cap {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 40px;
+  align-items: start;
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+.media {
+  grid-column: 1 / span 7;
+  position: relative;
+  aspect-ratio: 4 / 3.3;
+}
+
+.media > :global(picture) {
+  position: absolute;
+  inset: 0;
+}
+
+.body {
+  grid-column: 9 / -1;
+  display: grid;
+  gap: 26px;
+  align-content: start;
+  padding-top: 8px;
+}
+
+.cap[data-flip] .media {
+  grid-column: 6 / -1;
+  grid-row: 1;
+}
+
+.cap[data-flip] .body {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+}
+
+.n {
+  color: var(--copper);
+}
+
+.title {
+  font-size: var(--fs-2);
+}
+
+.facts {
+  display: grid;
+  gap: 22px;
+}
+
+.facts > div {
+  display: grid;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.facts dt {
+  color: var(--ink-soft);
+}
+
+.facts dd {
+  line-height: 1.6;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.details li {
+  padding: 6px 12px;
+  background: var(--paper-deep);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+}
+
+.archive {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  background: var(--paper-deep);
+}
+
+.archive figcaption {
+  display: grid;
+  gap: 4px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.archive figcaption :global(.label) {
+  color: var(--copper);
+  font-size: 0.64rem;
+}
+
+.materials {
+  display: grid;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: var(--section);
+  border-top: 1px solid var(--ink);
+}
+
+.materials > :global(.label) {
+  color: var(--copper);
+}
+
+.matTitle {
+  font-size: var(--fs-1);
+}
+
+.matTitle em {
+  color: var(--copper);
+}
+
+.matText {
+  max-width: 52ch;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+@media (max-width: 900px) {
+  .media,
+  .body,
+  .cap[data-flip] .media,
+  .cap[data-flip] .body {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}

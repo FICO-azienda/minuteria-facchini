@@ -1,0 +1,256 @@
+.chapters {
+  display: grid;
+  gap: clamp(88px, 11vw, 180px);
+  padding-top: var(--section);
+  padding-bottom: var(--section);
+}
+
+.chapter {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 28px;
+}
+
+.n {
+  grid-column: 1 / span 3;
+  color: var(--copper);
+  padding-top: 0.9em;
+}
+
+.h {
+  grid-column: 4 / -1;
+  font-size: var(--fs-1);
+}
+
+.h em {
+  color: var(--copper);
+}
+
+.text {
+  grid-column: 7 / span 6;
+  display: grid;
+  gap: 1em;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  max-width: 52ch;
+}
+
+.quoteChapter .h {
+  grid-column: 2 / -1;
+}
+
+.withImage {
+  align-items: end;
+}
+
+.chapterBody {
+  grid-column: 1 / span 9;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 28px;
+}
+
+.chapterBody .n {
+  grid-column: 1 / span 3;
+}
+
+.chapterBody .h {
+  grid-column: 4 / -1;
+}
+
+.chapterBody .text {
+  grid-column: 4 / -1;
+}
+
+.portrait {
+  grid-column: 10 / -1;
+  justify-self: end;
+  width: min(100%, 300px);
+  padding: 12px 12px 0;
+  background: var(--paper-deep);
+  box-shadow: 0 30px 60px -36px rgb(0 0 0 / 0.45);
+}
+
+.portrait figcaption {
+  display: grid;
+  gap: 2px;
+  padding: 12px 2px 14px;
+  font-size: 0.9rem;
+}
+
+.portrait figcaption :global(.label) {
+  color: var(--copper);
+  font-size: 0.64rem;
+}
+
+/* Capitolo del mare: metà immagine, metà testo, a tutta larghezza */
+.sea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+}
+
+.seaMedia {
+  position: relative;
+  min-height: 420px;
+}
+
+.seaText {
+  display: grid;
+  gap: 28px;
+  align-content: center;
+  padding: var(--section) var(--pad);
+}
+
+.seaText > :global(.label) {
+  color: var(--copper-glow);
+}
+
+.seaTitle {
+  font-size: var(--fs-2);
+}
+
+.seaTitle em {
+  color: var(--copper-glow);
+}
+
+.seaBody {
+  display: grid;
+  gap: 1em;
+  color: var(--sand);
+  max-width: 50ch;
+}
+
+.today {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 40px;
+  padding-top: var(--section);
+  padding-bottom: calc(var(--section) * 0.6);
+}
+
+.todayHead {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 28px;
+}
+
+.todayText {
+  grid-column: 7 / span 6;
+  display: grid;
+  gap: 1em;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  max-width: 52ch;
+}
+
+.archive {
+  padding-top: calc(var(--section) * 0.5);
+  padding-bottom: var(--section);
+}
+
+.archiveHead {
+  display: grid;
+  gap: 12px;
+  padding-top: 28px;
+  border-top: 1px solid var(--ink);
+  margin-bottom: 40px;
+}
+
+.archiveHead :global(.label) {
+  color: var(--copper);
+}
+
+.archiveTitle {
+  font-size: var(--fs-4);
+  font-weight: 450;
+  letter-spacing: -0.01em;
+}
+
+.archiveGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--gutter);
+}
+
+.archiveGrid li {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.archiveGrid :global(picture) {
+  aspect-ratio: 3 / 2;
+  background: #111;
+}
+
+.archiveGrid :global(img) {
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.archiveCaption {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.archiveCaption :global(.label) {
+  color: var(--ink);
+  margin-right: 6px;
+}
+
+@media (max-width: 1000px) {
+  .archiveGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .n,
+  .h,
+  .text,
+  .quoteChapter .h,
+  .chapterBody,
+  .chapterBody .n,
+  .chapterBody .h,
+  .chapterBody .text,
+  .todayText {
+    grid-column: 1 / -1;
+  }
+
+  .n {
+    padding-top: 0;
+  }
+
+  .chapterBody {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: min(80%, 300px);
+  }
+
+  .sea {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .seaMedia {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .archiveGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

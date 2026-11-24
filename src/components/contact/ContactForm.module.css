@@ -1,0 +1,359 @@
+.form {
+  display: grid;
+  gap: 28px;
+}
+
+.intro {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px var(--gutter);
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.optional {
+  margin-left: 8px;
+  color: var(--ink-soft);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-size: 0.72rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.06rem;
+  transition: border-color 300ms ease, background-color 300ms ease;
+  appearance: none;
+}
+
+.field textarea {
+  min-height: 150px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: var(--ink);
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: none;
+  border-color: var(--copper);
+  box-shadow: 0 1px 0 0 var(--copper);
+}
+
+.field textarea:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--copper);
+}
+
+.field[data-invalid] input,
+.field[data-invalid] textarea {
+  border-color: #a3261b;
+}
+
+.selectWrap {
+  position: relative;
+}
+
+.selectWrap::after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+.selectWrap select {
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.hint {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.error {
+  font-size: var(--fs-small);
+  color: #a3261b;
+  font-weight: 500;
+}
+
+.error::before {
+  content: "— ";
+}
+
+/* Area di trascinamento: un foglio da disegno vuoto */
+.drop {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 32px 20px;
+  border: 1px dashed var(--line-strong);
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 24px 24px;
+  background-color: rgb(255 255 255 / 0.25);
+  text-align: center;
+  transition: border-color 300ms ease, background-color 300ms ease;
+}
+
+.drop[data-dragging] {
+  border-color: var(--copper);
+  border-style: solid;
+  background-color: rgb(163 72 37 / 0.06);
+}
+
+.drop[data-invalid] {
+  border-color: #a3261b;
+}
+
+.dropIcon {
+  width: 44px;
+  height: 44px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.pick {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--copper);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.dropHint {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.files {
+  display: grid;
+  gap: 6px;
+  margin: 4px 0 0;
+}
+
+.files li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: var(--paper-deep);
+  font-size: var(--fs-small);
+}
+
+.fileName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileSize {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.remove {
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 14px;
+  align-items: start;
+  font-size: var(--fs-small);
+  line-height: 1.55;
+}
+
+.consent input {
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  accent-color: var(--copper-strong);
+  cursor: pointer;
+}
+
+.consent a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.consent .error {
+  grid-column: 2;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  padding-top: 8px;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 58px;
+  padding: 0 10px 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--copper-strong);
+  color: var(--paper);
+  font-size: 1.02rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+
+.submit:hover {
+  background: var(--ink);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.submitArrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(238 232 220 / 0.16);
+  transition: transform 400ms var(--ease-out);
+}
+
+.submit:hover .submitArrow {
+  transform: translateX(3px);
+}
+
+.response {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  max-width: 30ch;
+}
+
+.status:focus {
+  outline: none;
+}
+
+.notice {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  padding: 20px 22px;
+  border-left: 2px solid var(--copper);
+  background: var(--paper-deep);
+  font-size: 0.96rem;
+}
+
+.notice[data-tone="error"] {
+  border-color: #a3261b;
+}
+
+.mailBtn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.done {
+  display: grid;
+  gap: 18px;
+  padding: 40px 0;
+}
+
+.done:focus {
+  outline: none;
+}
+
+.doneTitle {
+  font-size: var(--fs-2);
+  font-weight: 330;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.again {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

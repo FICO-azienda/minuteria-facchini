@@ -1,0 +1,28 @@
+.box {
+  display: grid;
+  gap: 28px;
+  align-content: center;
+  justify-items: start;
+  min-height: 80vh;
+  padding-top: calc(var(--header-h) + 40px);
+  padding-bottom: 80px;
+}
+
+.box :global(.label) {
+  color: var(--copper);
+}
+
+.title {
+  font-size: var(--fs-1);
+  max-width: 12ch;
+}
+
+.title em {
+  color: var(--copper);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}

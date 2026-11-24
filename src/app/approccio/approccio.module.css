@@ -1,0 +1,203 @@
+.statement {
+  padding: var(--section) 0;
+}
+
+.big {
+  font-size: var(--fs-1);
+  max-width: 18ch;
+}
+
+.big em {
+  color: var(--copper-glow);
+}
+
+.phases {
+  display: grid;
+  padding-top: var(--section);
+  padding-bottom: calc(var(--section) * 0.6);
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 24px;
+  padding-top: 40px;
+  border-top: 1px solid var(--ink);
+}
+
+.phaseNum {
+  grid-column: 1 / span 4;
+  font-size: clamp(6rem, 16vw, 15rem);
+  font-weight: 780;
+  font-variation-settings: "wdth" 62;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  color: var(--copper);
+}
+
+.phaseBody {
+  grid-column: 6 / -1;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.verb {
+  font-size: var(--fs-1);
+}
+
+.lead {
+  max-width: 34ch;
+}
+
+.text {
+  max-width: 56ch;
+  color: var(--ink-soft);
+  font-size: 1.06rem;
+}
+
+.ask {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.ask li {
+  padding: 6px 12px;
+  background: var(--paper-deep);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+}
+
+.dim {
+  grid-column: 1 / -1;
+  margin: clamp(40px, 6vw, 88px) 0 clamp(24px, 3vw, 40px);
+}
+
+.sheetSection {
+  padding: var(--section) 0;
+  background: var(--paper-deep);
+}
+
+.sheetWrap {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 48px;
+}
+
+.sheetIntro {
+  grid-column: 1 / span 5;
+  display: grid;
+  gap: 22px;
+  align-content: start;
+}
+
+.sheetIntro > :global(.label) {
+  color: var(--copper);
+}
+
+.sheetIntro p:last-child {
+  color: var(--ink-soft);
+  max-width: 42ch;
+}
+
+.sheetTitle {
+  font-size: var(--fs-2);
+}
+
+.sheetTitle em {
+  color: var(--copper);
+}
+
+/* La scheda è impaginata come un cartiglio */
+.sheet {
+  grid-column: 7 / -1;
+  margin: 0;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.sheet > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) 1.6fr;
+}
+
+.sheet > div + div {
+  border-top: 1px solid var(--line-strong);
+}
+
+.sheet dt {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 16px;
+  border-right: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sheetN {
+  color: var(--copper);
+}
+
+.sheet dd {
+  padding: 14px 16px;
+  line-height: 1.5;
+}
+
+.promise {
+  display: grid;
+  gap: 24px;
+  padding-top: var(--section);
+  padding-bottom: var(--section);
+}
+
+.promiseTitle {
+  font-size: var(--fs-2);
+  max-width: 20ch;
+}
+
+.promiseTitle em {
+  color: var(--copper);
+}
+
+.promise p {
+  max-width: 54ch;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+@media (max-width: 900px) {
+  .phaseNum,
+  .phaseBody,
+  .sheetIntro,
+  .sheet {
+    grid-column: 1 / -1;
+  }
+
+  .phaseNum {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .sheet > div {
+    grid-template-columns: 1fr;
+  }
+
+  .sheet dt {
+    border-right: 0;
+    padding-bottom: 4px;
+  }
+
+  .sheet dd {
+    padding-top: 0;
+  }
+}
