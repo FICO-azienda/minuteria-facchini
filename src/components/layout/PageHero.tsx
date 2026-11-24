@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
+import { OriginTag } from "@/components/OriginTag";
 import { Picture, type ImageId } from "@/components/Picture";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { Dimension } from "@/components/ui/Dimension";
@@ -28,9 +29,12 @@ export function PageHero({ index, label, path, title, lede, image, imageLabel }:
         </p>
         <h1 className={`display ${styles.title}`}>
           {title.map((l, i) => (
-            <span key={i} className={styles.line} style={{ animationDelay: `${80 + i * 100}ms` }}>
-              {l}
-            </span>
+            <Fragment key={i}>
+              <span className={styles.line} style={{ animationDelay: `${80 + i * 100}ms` }}>
+                {l}
+              </span>
+              {i < title.length - 1 ? " " : null}
+            </Fragment>
           ))}
         </h1>
         <div className={`lede ${styles.lede}`}>{lede}</div>
@@ -39,6 +43,7 @@ export function PageHero({ index, label, path, title, lede, image, imageLabel }:
         <div className={`wrap ${styles.mediaWrap}`}>
           <div className={styles.media}>
             <Picture id={image} sizes="100vw" priority fill />
+            <OriginTag id={image} />
           </div>
           <Dimension label={imageLabel ?? "Scala 1 : 1"} className={styles.dim} />
         </div>

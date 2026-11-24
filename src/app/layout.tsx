@@ -4,6 +4,7 @@ import { RevealObserver } from "@/components/RevealObserver";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -47,12 +48,12 @@ export const metadata: Metadata = {
     title: site.defaultTitle,
     description: site.description,
     url: "/",
-    images: [{ url: "/og/og-default.jpg", width: 1200, height: 630, alt: site.name }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Minuteria Facchini — Il pezzo che ancora non esiste" }],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    icon: [{ url: asset("/icon.svg"), type: "image/svg+xml" }],
   },
   formatDetection: { telephone: false },
 };

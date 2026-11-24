@@ -27,7 +27,6 @@ export function OrganizationJsonLd() {
       addressRegion: c.province,
       addressCountry: "IT",
     },
-    areaServed: "Worldwide",
     knowsAbout: [
       "Componenti metallici su misura",
       "Minuteria metallica",

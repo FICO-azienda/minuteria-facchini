@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { pageMeta } from "@/lib/meta";
 import { PageHero } from "@/components/layout/PageHero";
+import { OriginTag } from "@/components/OriginTag";
 import { Picture } from "@/components/Picture";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { SectorGlyph } from "@/components/ui/SectorGlyph";
 import { sectors } from "@/content/sectors";
 import styles from "./settori.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Settori applicativi",
   description:
-    "Subacquea, sport invernali, sicurezza e soccorso, difesa, cererie e industria: le stesse competenze nei componenti metallici, applicate a esigenze produttive molto diverse.",
-  alternates: { canonical: "/settori/" },
-};
+    "Subacquea, sport invernali, sicurezza e soccorso, difesa, cererie e industria: componenti metallici su misura per esigenze molto diverse.",
+  path: "/settori/",
+});
 
 export default function SettoriPage() {
   return (
@@ -33,8 +34,8 @@ export default function SettoriPage() {
         lede={
           <>
             <p>
-              Non siamo legati a un solo mercato. Sappiamo portare le stesse competenze in contesti molto diversi,
-              perché ogni settore ci chiede la stessa cosa: un componente che funzioni dove deve funzionare.
+              Non siamo legati a un solo mercato: portiamo le stesse lavorazioni in contesti molto diversi, perché ogni
+              settore ci chiede la stessa cosa, un componente che funzioni dove deve funzionare.
             </p>
             <p>Non pubblichiamo i nomi dei nostri clienti. Ti raccontiamo invece che tipo di problemi risolviamo.</p>
           </>
@@ -77,6 +78,7 @@ export default function SettoriPage() {
               </header>
               <div className={styles.media} data-reveal="wipe">
                 <Picture id={s.image} sizes="(max-width: 900px) 100vw, 50vw" fill />
+                <OriginTag id={s.image} />
               </div>
               <dl className={styles.facts} data-reveal="up">
                 <div>
@@ -118,21 +120,15 @@ export default function SettoriPage() {
         ))}
       </div>
 
-      <section className={`wrap ${styles.yours}`} aria-labelledby="tuo-title">
-        <p className="label">07 / ?</p>
-        <h2 id="tuo-title" className={`display ${styles.yoursTitle}`}>
-          Il tuo settore <em>non è in elenco?</em>
-        </h2>
-        <p className={styles.yoursText}>
-          Ogni settore di questa pagina è iniziato con la richiesta di un singolo cliente. Se lavori in un ambito
-          diverso e hai bisogno di un componente metallico che non trovi,{" "}
-          <Link href="/contatti/">raccontaci la tua applicazione</Link>.
-        </p>
-      </section>
-
       <CtaBand
-        title={[<>Una nuova applicazione?</>, <><em>Parliamone.</em></>]}
-        text={<p>Descrivici il contesto in cui il pezzo dovrà lavorare. Il resto lo definiamo insieme.</p>}
+        eyebrow="07 / ?"
+        title={[<>Il tuo settore</>, <><em>non è in elenco?</em></>]}
+        text={
+          <p>
+            Se lavori in un ambito diverso e ti serve un componente metallico che non trovi, descrivici il contesto in
+            cui dovrà lavorare. È così che si apre un settore nuovo.
+          </p>
+        }
         cta="Contattaci per una nuova applicazione"
       />
     </>

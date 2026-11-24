@@ -5,7 +5,7 @@ export const site = {
   name: "Minuteria Facchini",
   defaultTitle: "Minuteria Facchini — Componenti metallici su misura, Olginate (LC)",
   description:
-    "Da quasi un secolo, a Olginate, sviluppiamo insieme ai clienti componenti metallici su misura: dalla subacquea allo sport, dalla sicurezza all'industria.",
+    "Componenti metallici su misura a Olginate (Lecco): una famiglia che lavora i metalli da quasi un secolo, per subacquea, sport, sicurezza, cererie e industria.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://fico-azienda.github.io/minuteria-facchini").replace(/\/$/, ""),
   contact: {
     // Ragione sociale e P.IVA: registro VIES della Commissione europea (verificato 24/11/2026).
@@ -20,7 +20,8 @@ export const site = {
     phoneIntl: "+390341682695" as string | null,
     email: "info@facchinimario.it",
     vat: "IT02710880135" as string | null,
-    geo: { lat: 45.7870165, lng: 9.422223 },
+    // Coordinate pubblicate sul vecchio sito aziendale ("Sede e stabilimento").
+    geo: { lat: 45.78985, lng: 9.42512 },
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Facchini+Mario+Sas+Via+dell%27Industria+2+23854+Olginate+LC",
   },
 };
@@ -40,5 +41,4 @@ export const pages: { path: string; priority?: number }[] = [
   { path: "/approccio/", priority: 0.8 },
   { path: "/contatti/", priority: 0.9 },
   { path: "/privacy/", priority: 0.2 },
-  { path: "/crediti-immagini/", priority: 0.2 },
 ];

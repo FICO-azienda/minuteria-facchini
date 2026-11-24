@@ -158,7 +158,7 @@
 
 .archive figcaption :global(.label) {
   color: var(--copper);
-  font-size: 0.64rem;
+  font-size: 0.7rem;
 }
 
 .lead .glyph,
@@ -169,38 +169,6 @@
 .lead .media {
   aspect-ratio: 16 / 10;
   grid-column: 1 / span 7;
-}
-
-.yours {
-  display: grid;
-  gap: 24px;
-  padding-top: var(--section);
-  padding-bottom: var(--section);
-}
-
-.yours > :global(.label) {
-  color: var(--copper);
-}
-
-.yoursTitle {
-  font-size: var(--fs-1);
-  max-width: 16ch;
-}
-
-.yoursTitle em {
-  color: var(--copper);
-}
-
-.yoursText {
-  max-width: 54ch;
-  color: var(--ink-soft);
-  font-size: 1.1rem;
-}
-
-.yoursText a {
-  color: var(--copper);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 @media (max-width: 1000px) {

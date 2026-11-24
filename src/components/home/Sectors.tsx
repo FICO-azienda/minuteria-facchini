@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { OriginTag } from "@/components/OriginTag";
 import { Picture } from "@/components/Picture";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { SectorGlyph } from "@/components/ui/SectorGlyph";
@@ -17,18 +18,18 @@ export function Sectors() {
       <div className="wrap">
         <SectionHead
           id="sect-title"
-          index="04"
+          index="03"
           label="Settori"
           title={[
-            <>Nata sott’acqua,</>,
+            <>Dal mare alle cererie,</>,
             <>
-              <em>messa al lavoro</em> ovunque.
+              <em>un solo mestiere.</em>
             </>,
           ]}
           intro={
             <p>
-              La subacquea ci ha insegnato a costruire pezzi che non possono sbagliare. Oggi quella competenza lavora
-              in settori che, sulla carta, non hanno nulla in comune.
+              Componenti per chi va sott’acqua, per le gare di slalom, per i vigili del fuoco, per le cererie.
+              Settori lontani tra loro, lo stesso modo di lavorare il metallo.
             </p>
           }
         />
@@ -36,17 +37,20 @@ export function Sectors() {
         <div className={styles.lead} data-reveal="up">
           <Link href={`/settori/#${lead.slug}`} className={styles.leadLink}>
             <div className={styles.leadMedia} data-reveal="wipe">
-              <Picture id={lead.image} sizes="(max-width: 900px) 100vw, 58vw" fill />
+              <Picture id={lead.image} sizes="(max-width: 900px) 100vw, 58vw" fill alt="" />
+              <span aria-hidden="true">
+                <OriginTag id={lead.image} />
+              </span>
             </div>
             <div className={styles.leadText}>
               <span className={styles.leadIndex}>
                 <SectorGlyph sector={lead.key} className={styles.glyph} />
                 01 / 06
               </span>
-              <h3 className={styles.leadName}>{lead.name}.</h3>
+              <span className={styles.leadName}>{lead.name}.</span>
               <p>{lead.short}</p>
               <span className={styles.leadMore}>
-                Scopri il settore <span aria-hidden="true">→</span>
+                Componenti per la subacquea <span aria-hidden="true">→</span>
               </span>
             </div>
           </Link>

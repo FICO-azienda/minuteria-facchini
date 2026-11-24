@@ -87,3 +87,17 @@ for (const item of selection) {
 await fs.mkdir(path.dirname(manifestPath), { recursive: true });
 await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
 console.log(`\n${Object.keys(manifest).length} immagini → ${path.relative(root, manifestPath)}`);
+
+// Rimuove le varianti non più usate (immagini tolte dalla selezione o larghezze cambiate).
+const keep = new Set(
+  Object.entries(manifest).flatMap(([id, e]) => e.widths.flatMap((w) => [`${id}-${w}.avif`, `${id}-${w}.webp`])),
+);
+let removed = 0;
+for (const f of await fs.readdir(outDir, { recursive: true })) {
+  const full = path.join(outDir, f);
+  if ((await fs.stat(full)).isFile() && !keep.has(f.split(path.sep).join("/"))) {
+    await fs.unlink(full);
+    removed++;
+  }
+}
+if (removed) console.log(`${removed} varianti non usate rimosse`);

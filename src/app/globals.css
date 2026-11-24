@@ -13,7 +13,7 @@
   --ink-soft: #5e584d;
   --oxide: #1e2d27;
   --oxide-deep: #151f1b;
-  --copper: #a34825; /* testo/link su carta: 4.9:1 */
+  --copper: #9c4322; /* testo/link: 5.3:1 su carta, 4.7:1 su carta scura */
   --copper-strong: #9c4322; /* fondo pulsanti con testo carta: 5.3:1 */
   --copper-glow: #e08a62; /* accento su fondo ossido: 5.5:1 */
   --patina: #93b5a2;
@@ -323,4 +323,39 @@ p {
 
 [data-reveal="lines"] .line {
   display: block;
+}
+
+/* Etichetta di provenienza delle immagini */
+.img-tag {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 2;
+  padding: 4px 8px 3px;
+  background: rgb(27 30 27 / 0.84);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.img-tag[data-origin="aziendale"] {
+  background: var(--copper-strong);
+}
+
+/* Movimento ridotto: nessuna transizione o animazione di spostamento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
 }

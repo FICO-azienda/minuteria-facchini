@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import { PageHero } from "@/components/layout/PageHero";
+import { OriginTag } from "@/components/OriginTag";
 import { Picture, type ImageId } from "@/components/Picture";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Lines } from "@/components/ui/Lines";
 import styles from "./azienda.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Azienda e storia",
   description:
-    "Quasi un secolo di lavorazione dei metalli a Olginate: l’ingegno di Mario Facchini, il passaggio di testimone a Roberto, la subacquea e i mercati internazionali.",
-  alternates: { canonical: "/azienda/" },
-};
+    "Quasi un secolo di lavorazione dei metalli nella famiglia Facchini: l’ingegno di Mario, il passaggio di testimone a Roberto, la subacquea.",
+  path: "/azienda/",
+});
 
 const archive: { id: ImageId; caption: string }[] = [
-  { id: "archivio/piastra-marcata", caption: "Piastra con il marchio inciso al laser" },
+  { id: "archivio/piastra-acqua", caption: "Piastra per l’attrezzatura subacquea" },
+  { id: "archivio/piastra-marcata", caption: "La stessa piastra, marcata al laser" },
   { id: "archivio/anelli-colorati", caption: "Anelli in filo piegato, colorati" },
   { id: "archivio/sostegni-stoppino", caption: "Fermagli per stoppini, per le cererie" },
   { id: "archivio/anelli-nero", caption: "Anelli e triangoli in filo d’acciaio" },
@@ -37,7 +40,7 @@ export default function AziendaPage() {
         lede={
           <p>
             Minuteria Facchini è un’azienda di famiglia di Olginate, in provincia di Lecco. La sua storia è fatta di
-            persone che, davanti a un problema tecnico, preferiscono trovare la soluzione piuttosto che cercarla a
+            persone che, davanti a un problema tecnico, preferiscono costruire la soluzione piuttosto che cercarla a
             catalogo.
           </p>
         }
@@ -68,8 +71,8 @@ export default function AziendaPage() {
           <div className={styles.text} data-reveal="up">
             <p>
               L’azienda porta il nome di Mario Facchini, il padre di Roberto. Era un uomo con una mentalità da
-              inventore: se per una lavorazione mancava l’utensile adatto, lo progettava e lo costruiva. Diversi di
-              quegli strumenti sono diventati brevetti.
+              inventore: se per una lavorazione mancava l’utensile adatto, lo progettava e lo costruiva. Alcune di
+              quelle soluzioni le ha anche brevettate.
             </p>
             <p>
               È da lui che arriva l’abitudine che ancora oggi guida il lavoro: partire dal problema, non dal
@@ -90,7 +93,7 @@ export default function AziendaPage() {
                 testimone dal padre Mario. Porta in azienda la conoscenza delle macchine CNC e, insieme, la volontà
                 di aprire l’officina a settori nuovi.
               </p>
-              <p>Il metodo resta quello di famiglia: ascoltare, capire, poi costruire.</p>
+              <p>Il metodo resta quello di famiglia: prima si ascolta, poi si progetta.</p>
             </div>
           </div>
           <figure className={styles.portrait} data-reveal="wipe">
@@ -106,6 +109,7 @@ export default function AziendaPage() {
       <section className={`on-dark ${styles.sea}`} aria-labelledby="mare-title">
         <div className={styles.seaMedia}>
           <Picture id="settori/subacquea-apnea" sizes="(max-width: 900px) 100vw, 50vw" fill />
+          <OriginTag id="settori/subacquea-apnea" />
         </div>
         <div className={styles.seaText}>
           <p className="label">04 · Il mare</p>
@@ -114,13 +118,12 @@ export default function AziendaPage() {
           </h2>
           <div className={styles.seaBody} data-reveal="up">
             <p>
-              Roberto è appassionato di immersioni e di pesca subacquea. All’inizio realizza da sé alcuni componenti
-              della propria attrezzatura, praticamente in casa: pezzi pensati da chi li usa, per chi li usa.
+              Roberto è appassionato di immersioni e di pesca subacquea. I primi componenti li realizza per la propria
+              attrezzatura, praticamente in casa: pezzi pensati da chi li usa.
             </p>
             <p>
-              Da quella passione nasce un’idea. Roberto partecipa a una fiera internazionale del settore a Miami e lì
-              incontra gli interlocutori giusti. È l’inizio di una collaborazione che porta l’azienda nella
-              componentistica per la subacquea e sui mercati internazionali.
+              Poi li porta a una fiera internazionale del settore a Miami. Da quell’esperienza nasce una collaborazione
+              che fa della componentistica per la subacquea una linea stabile dell’azienda.
             </p>
             <p>
               Già dal 2007 il sito aziendale presentava una linea dedicata agli accessori per l’attrezzatura subacquea
@@ -139,13 +142,12 @@ export default function AziendaPage() {
         </div>
         <div className={styles.todayText} data-reveal="up">
           <p>
-            La subacquea ha dimostrato una cosa: le competenze maturate su un pezzo difficile si possono portare
-            altrove. Oggi Minuteria Facchini realizza componenti per lo sport, la sicurezza, la difesa, le cererie e
-            l’industria, lavorando quasi sempre su commissione.
+            Oggi Minuteria Facchini realizza componenti per la subacquea, lo sport, la sicurezza, la difesa, le cererie
+            e l’industria, lavorando quasi sempre su commissione.
           </p>
           <p>
-            Il cliente non arriva con un codice da ordinare ma con una domanda. E trova dall’altra parte un’azienda di
-            famiglia, con un interlocutore diretto che conosce il pezzo dal disegno alla consegna.
+            Chi ci contatta di solito non ha un codice da ordinare ma una domanda. Dall’altra parte trova un’azienda di
+            famiglia, con persone che conoscono l’officina e il pezzo.
           </p>
         </div>
       </section>

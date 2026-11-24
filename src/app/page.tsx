@@ -29,8 +29,8 @@ export default function HomePage() {
         ]}
         text={
           <p>
-            Mandaci un disegno, uno schizzo o anche solo due righe che descrivono il problema. Ne parliamo
-            direttamente, senza intermediari, e ti diciamo come lo faremmo.
+            Bastano due righe sul problema, anche senza disegno. Ne parliamo direttamente e ti diciamo come lo
+            faremmo.
           </p>
         }
       />

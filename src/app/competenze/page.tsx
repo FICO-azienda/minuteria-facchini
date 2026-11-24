@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import { PageHero } from "@/components/layout/PageHero";
+import { OriginTag } from "@/components/OriginTag";
 import { Picture } from "@/components/Picture";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { capabilities } from "@/content/capabilities";
 import styles from "./competenze.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Competenze e lavorazioni",
   description:
-    "Componenti metallici su commissione, lavorazioni CNC, taglio laser, stampaggio a freddo di filo e lamiera, marcatura laser e colorazione: cosa possiamo mettere al lavoro sul tuo progetto.",
-  alternates: { canonical: "/competenze/" },
-};
+    "Componenti metallici su commissione: tornitura e fresatura CNC, taglio laser, stampaggio a freddo, marcatura laser e componenti colorati.",
+  path: "/competenze/",
+});
 
 export default function CompetenzePage() {
   return (
@@ -30,8 +32,8 @@ export default function CompetenzePage() {
         ]}
         lede={
           <p>
-            Non un catalogo tecnico, ma le competenze che mettiamo a disposizione quando ci porti un’esigenza. Le
-            combiniamo di volta in volta, a seconda di quello che il componente deve fare.
+            Le competenze che mettiamo a disposizione quando ci porti un’esigenza: lavorazioni, materiali, marcatura,
+            colore. Le combiniamo a seconda di quello che il componente deve fare.
           </p>
         }
       />
@@ -55,6 +57,7 @@ export default function CompetenzePage() {
             aria-labelledby={`${c.slug}-t`}>
             <div className={styles.media} data-reveal="wipe">
               <Picture id={c.image} sizes="(max-width: 900px) 100vw, 55vw" fill />
+              <OriginTag id={c.image} />
             </div>
             <div className={styles.body}>
               <p className={`label ${styles.n}`}>

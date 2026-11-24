@@ -13,14 +13,13 @@ const MAX_FILE_MB = 10;
 const ACCEPTED_EXT = ["pdf", "dwg", "dxf", "step", "stp", "iges", "igs", "jpg", "jpeg", "png", "zip"];
 
 const SECTORS = [
-  "Subacquea e nautica",
-  "Sport e attrezzature per la neve",
+  "Subacquea",
+  "Sport invernali",
   "Sicurezza e soccorso",
   "Difesa",
-  "Cererie e articoli per il culto",
-  "Meccanica e industria",
-  "Arredo, design e oggettistica",
-  "Altro",
+  "Cererie",
+  "Altre industrie",
+  "Altro / non so",
 ];
 
 type Errors = Partial<Record<"name" | "email" | "message" | "files" | "privacy", string>>;
@@ -33,6 +32,7 @@ export function ContactForm() {
   const uid = useId();
   const formRef = useRef<HTMLFormElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const pickRef = useRef<HTMLButtonElement>(null);
   const statusRef = useRef<HTMLDivElement>(null);
   const [files, setFiles] = useState<File[]>([]);
   const [dragging, setDragging] = useState(false);
@@ -78,6 +78,8 @@ export function ContactForm() {
     const next = files.filter((_, i) => i !== index);
     setFiles(next);
     setErrors((e) => ({ ...e, files: checkFiles(next) }));
+    // Il pulsante premuto sparisce: il focus torna sul controllo per allegare.
+    requestAnimationFrame(() => pickRef.current?.focus());
   }
 
   function validate(data: FormData): Errors {
@@ -98,6 +100,10 @@ export function ContactForm() {
     const order: (keyof Errors)[] = ["name", "email", "message", "files", "privacy"];
     const first = order.find((k) => errs[k]);
     if (!first) return;
+    if (first === "files") {
+      pickRef.current?.focus();
+      return;
+    }
     const map = { name: "nome", email: "email", message: "messaggio", files: "allegati", privacy: "privacy" };
     document.getElementById(id(map[first]))?.focus();
   }
@@ -163,11 +169,11 @@ export function ContactForm() {
       <div className={styles.done} ref={statusRef} tabIndex={-1} role="status">
         <p className="label">Richiesta ricevuta</p>
         <p className={styles.doneTitle}>
-          Grazie. <em className="serif-accent">Ti richiamiamo noi.</em>
+          Grazie. <em className="serif-accent">Ti rispondiamo noi.</em>
         </p>
         <p>
-          Leggiamo ogni richiesta personalmente. Se ci serve un dettaglio in più sul componente, ti contattiamo
-          all’indirizzo che ci hai lasciato.
+          Leggiamo ogni richiesta personalmente e ti rispondiamo all’indirizzo email che ci hai lasciato, o al
+          telefono se l’hai indicato.
         </p>
         <button type="button" className={styles.again} onClick={() => setStatus("idle")}>
           Invia un’altra richiesta
@@ -251,8 +257,8 @@ export function ContactForm() {
           </svg>
           <p>
             Trascina qui il tuo disegno tecnico, oppure{" "}
-            <button type="button" className={styles.pick} onClick={() => fileInputRef.current?.click()}
-              aria-describedby={`${id("allegati-label")} ${id("allegati")}-hint`}>
+            <button ref={pickRef} type="button" className={styles.pick} onClick={() => fileInputRef.current?.click()}
+              aria-describedby={`${id("allegati-label")} ${id("allegati")}-hint${errors.files ? ` ${id("allegati")}-err` : ""}`}>
               scegli un file
             </button>
           </p>
@@ -321,7 +327,7 @@ export function ContactForm() {
             </svg>
           </span>
         </button>
-        <p className={styles.response}>Rispondiamo personalmente, di solito entro pochi giorni lavorativi.</p>
+        <p className={styles.response}>Ogni richiesta la legge una persona dell’azienda.</p>
       </div>
 
       <div ref={statusRef} tabIndex={-1} aria-live="polite" className={styles.status}>
@@ -340,7 +346,7 @@ export function ContactForm() {
           <div className={styles.notice} data-tone="error">
             <p>
               <strong>Non siamo riusciti a inviare la richiesta.</strong> Riprova tra poco, oppure inviala via email
-              {site.contact.phone ? <> o chiamaci al {site.contact.phone}</> : null}.
+              {site.contact.phone ? <> o chiamaci allo {site.contact.phone}</> : null}.
             </p>
             <a href={mailto} className={styles.mailBtn}>
               Invia via email

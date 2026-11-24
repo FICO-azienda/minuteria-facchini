@@ -44,7 +44,7 @@
   min-height: 52px;
   padding: 12px 0;
   border: 0;
-  border-bottom: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--ink-soft);
   border-radius: 0;
   background: transparent;
   font-size: 1.06rem;
@@ -55,7 +55,7 @@
 .field textarea {
   min-height: 150px;
   padding: 14px 16px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--ink-soft);
   resize: vertical;
   line-height: 1.55;
 }
@@ -70,12 +70,13 @@
 .field select:focus-visible,
 .field textarea:focus-visible {
   outline: none;
-  border-color: var(--copper);
-  box-shadow: 0 1px 0 0 var(--copper);
+  border-color: var(--ink);
+  box-shadow: 0 2px 0 0 var(--ink);
+  background: rgb(255 255 255 / 0.35);
 }
 
 .field textarea:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--copper);
+  box-shadow: inset 0 0 0 2px var(--ink);
 }
 
 .field[data-invalid] input,
@@ -128,7 +129,7 @@
   justify-items: center;
   gap: 6px;
   padding: 32px 20px;
-  border: 1px dashed var(--line-strong);
+  border: 1px dashed var(--ink-soft);
   background:
     linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 24px 24px,
     linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 24px 24px;

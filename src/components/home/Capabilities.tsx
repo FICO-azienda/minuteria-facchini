@@ -16,18 +16,18 @@ export function Capabilities() {
       <div className="wrap">
         <SectionHead
           id="cap-title"
-          index="03"
+          index="02"
           label="Competenze"
           title={[
             <>Dal disegno</>,
             <>
-              <em>alla finitura.</em>
+              <em>al pezzo.</em>
             </>,
           ]}
           intro={
             <p>
-              Lavorazioni diverse, un solo obiettivo: arrivare al componente che serve davvero. Non è un catalogo, è
-              quello che possiamo mettere al lavoro sul tuo progetto.
+              Le lavorazioni che possiamo mettere al lavoro sul tuo progetto, combinate di volta in volta a seconda di
+              quello che il componente deve fare.
             </p>
           }
         />

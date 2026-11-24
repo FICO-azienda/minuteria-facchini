@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Dimension } from "@/components/ui/Dimension";
@@ -6,12 +7,12 @@ import { Lines } from "@/components/ui/Lines";
 import { phases } from "@/content/method";
 import styles from "./approccio.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Il nostro approccio",
   description:
     "Ascoltare, progettare, realizzare, perfezionare: come nasce un componente metallico su misura insieme a Minuteria Facchini.",
-  alternates: { canonical: "/approccio/" },
-};
+  path: "/approccio/",
+});
 
 const sheet = [
   { k: "Applicazione", v: "Che cosa deve fare il componente e dove verrà montato." },
@@ -40,8 +41,8 @@ export default function ApproccioPage() {
         ]}
         lede={
           <p>
-            Non vendiamo componenti a scaffale. Ogni commessa nasce da un’esigenza specifica e prende forma nel
-            dialogo tra noi e il cliente: è il modo in cui lavoriamo da sempre.
+            Lavoriamo quasi sempre su commissione: ogni commessa nasce da un’esigenza specifica e prende forma
+            parlando con il cliente.
           </p>
         }
       />
@@ -51,13 +52,10 @@ export default function ApproccioPage() {
           <p className={`display ${styles.big}`} data-reveal="lines">
             <Lines
               lines={[
-                <>Il cliente non è</>,
-                <>chi compra il pezzo.</>,
+                <>Il pezzo</>,
+                <>lo disegniamo</>,
                 <>
-                  <em>È chi lo progetta</em>
-                </>,
-                <>
-                  <em>insieme a noi.</em>
+                  <em>con chi lo userà.</em>
                 </>,
               ]}
             />
@@ -104,7 +102,7 @@ export default function ApproccioPage() {
             </h2>
             <p>
               Non devi avere tutte le risposte. Queste sono le informazioni che ci aiutano a capire il pezzo: quelle
-              che non conosci, le scopriamo insieme.
+              che ancora non conosci, le definiamo insieme.
             </p>
           </div>
           <dl className={styles.sheet}>
@@ -133,7 +131,7 @@ export default function ApproccioPage() {
 
       <CtaBand
         title={[<>Sviluppiamo insieme</>, <><em>la soluzione.</em></>]}
-        text={<p>Il primo passo è la fase uno: ascoltare. Raccontaci la tua esigenza.</p>}
+        text={<p>Si comincia ascoltando. Raccontaci che cosa ti serve.</p>}
       />
     </>
   );

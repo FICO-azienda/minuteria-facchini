@@ -7,17 +7,17 @@ const chapters = [
   {
     n: "01",
     title: "L’ingegno",
-    text: "L’azienda porta il nome di Mario Facchini, il padre di Roberto: un uomo che, quando lo strumento giusto non esisteva, lo inventava. Diversi di quegli utensili sono diventati brevetti.",
+    text: "L’azienda porta il nome di Mario Facchini, il padre di Roberto. Quando per una lavorazione mancava l’utensile giusto, lo progettava e lo costruiva da sé.",
   },
   {
     n: "02",
     title: "Il testimone",
-    text: "Roberto raccoglie un’esperienza di famiglia nella lavorazione dei metalli che ha quasi un secolo, e la porta in mercati nuovi senza cambiarne il metodo.",
+    text: "Roberto, perito industriale specializzato nel controllo numerico, raccoglie il testimone dal padre e porta le macchine CNC in un’officina con quasi un secolo di mestiere alle spalle.",
   },
   {
     n: "03",
     title: "Il mare",
-    text: "Appassionato di immersioni e pesca subacquea, Roberto comincia costruendo da sé i pezzi della propria attrezzatura. Una fiera internazionale a Miami trasforma quella passione in un nuovo mercato per l’azienda.",
+    text: "Appassionato di immersioni e pesca subacquea, Roberto realizza i primi pezzi per la propria attrezzatura. Dopo una fiera del settore a Miami diventano una linea dell’azienda, presente nel catalogo almeno dal 2007.",
   },
 ];
 
@@ -27,7 +27,7 @@ export function Story() {
       <div className={`wrap ${styles.inner}`}>
         <div className={styles.head}>
           <p className={`label ${styles.meta}`} data-reveal="fade">
-            <span className={styles.index}>Tav. 02</span> Storia
+            <span className={styles.index}>Tav. 01</span> Storia
           </p>
           <h2 id="story-title" className={`display ${styles.title}`} data-reveal="lines">
             <Lines
@@ -66,7 +66,7 @@ export function Story() {
           <Picture id="archivio/piastra-marcata" sizes="(max-width: 820px) 100vw, 480px" />
           <figcaption className={styles.caption}>
             <span className="label">Archivio Facchini</span>
-            Piastra metallica con il marchio inciso al laser, dal vecchio catalogo
+            Piastra per l’attrezzatura subacquea, marcata al laser
           </figcaption>
         </figure>
 

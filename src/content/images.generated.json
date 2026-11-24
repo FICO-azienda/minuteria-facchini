@@ -1,7 +1,7 @@
 {
   "hero/pezzo": {
-    "width": 6000,
-    "height": 3376,
+    "width": 2400,
+    "height": 1350,
     "widths": [
       480,
       800,
@@ -12,7 +12,7 @@
     "color": "rgb(168 168 168)",
     "alt": "Un particolare metallico lavorato appoggiato sul proprio disegno tecnico",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "EnCata PD su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/SRqJ3eli-4I",
     "focus": "44% 55%"
   },
@@ -36,7 +36,20 @@
       480
     ],
     "color": "rgb(232 232 232)",
-    "alt": "Piastra metallica forata con la scritta facchinimario.it Made in Italy incisa al laser",
+    "alt": "Piastra in acciaio per l’attrezzatura subacquea, con la scritta facchinimario.it Made in Italy incisa al laser",
+    "origin": "aziendale",
+    "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
+    "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*",
+    "focus": "50% 50%"
+  },
+  "archivio/piastra-acqua": {
+    "width": 539,
+    "height": 308,
+    "widths": [
+      480
+    ],
+    "color": "rgb(248 248 248)",
+    "alt": "Piastra nera per l’attrezzatura subacquea, marcata facchinimario.it, immersa nell’acqua tra le bolle",
     "origin": "aziendale",
     "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
     "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*",
@@ -75,7 +88,7 @@
       480
     ],
     "color": "rgb(8 8 24)",
-    "alt": "Anelli e triangoli in filo d'acciaio piegato su fondo nero",
+    "alt": "Anelli e triangoli in filo d’acciaio piegato su fondo nero",
     "origin": "aziendale",
     "credit": "Archivio Facchini · Vecchio sito aziendale (via Internet Archive)",
     "sourceUrl": "https://web.archive.org/web/2016*/facchinimario.it*",
@@ -122,25 +135,25 @@
     "focus": "50% 50%"
   },
   "lavorazioni/commissione": {
-    "width": 3024,
-    "height": 3855,
+    "width": 1883,
+    "height": 2400,
     "widths": [
       480,
       800,
       1200,
       1600,
-      2400
+      1883
     ],
     "color": "rgb(8 8 8)",
     "alt": "File ordinate di boccole metalliche tornite",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "alerkiv su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/C2S_2gmmQlw",
     "focus": "50% 50%"
   },
   "lavorazioni/metallo": {
-    "width": 4032,
-    "height": 3024,
+    "width": 2400,
+    "height": 1800,
     "widths": [
       480,
       800,
@@ -149,15 +162,15 @@
       2400
     ],
     "color": "rgb(88 72 56)",
-    "alt": "Un pezzo d'acciaio in lavorazione sul tornio",
+    "alt": "Un pezzo d’acciaio in lavorazione sul tornio",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Denis Sebastian Tamas su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/xNDB0o4_m-Q",
     "focus": "55% 50%"
   },
   "lavorazioni/marcatura": {
-    "width": 6000,
-    "height": 6000,
+    "width": 2400,
+    "height": 2400,
     "widths": [
       480,
       800,
@@ -168,30 +181,29 @@
     "color": "rgb(8 8 8)",
     "alt": "Testa di una macchina di marcatura laser al lavoro",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "Opt Lasers from Poland su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/7254420/",
     "focus": "50% 60%"
   },
   "lavorazioni/colore": {
-    "width": 4000,
-    "height": 6000,
+    "width": 1600,
+    "height": 2400,
     "widths": [
       480,
       800,
       1200,
-      1600,
-      2400
+      1600
     ],
     "color": "rgb(72 72 72)",
     "alt": "Moschettone in metallo colorato bronzo con una corda verde",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "Tima Miroshnichenko su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/5916215/",
     "focus": "50% 45%"
   },
   "lavorazioni/sviluppo": {
-    "width": 6960,
-    "height": 4640,
+    "width": 2400,
+    "height": 1600,
     "widths": [
       480,
       800,
@@ -202,13 +214,13 @@
     "color": "rgb(168 168 168)",
     "alt": "Disegno tecnico quotato con una riga metallica",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "Joachim Schnürle su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/38908429/",
     "focus": "50% 50%"
   },
   "lavorazioni/misura": {
-    "width": 6000,
-    "height": 3376,
+    "width": 2400,
+    "height": 1350,
     "widths": [
       480,
       800,
@@ -219,13 +231,13 @@
     "color": "rgb(8 8 8)",
     "alt": "Un calibro appoggiato sul carrello di un tornio",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "FFD Restorations su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/16630111/",
     "focus": "50% 50%"
   },
   "lavorazioni/fresatura": {
-    "width": 5898,
-    "height": 3631,
+    "width": 2400,
+    "height": 1478,
     "widths": [
       480,
       800,
@@ -234,15 +246,15 @@
       2400
     ],
     "color": "rgb(8 8 8)",
-    "alt": "Fresa a controllo numerico che lavora un pezzo d'alluminio",
+    "alt": "Fresa a controllo numerico che lavora un pezzo d’alluminio",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Jelifer Maniago su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/8MBTn3Z71zI",
     "focus": "50% 50%"
   },
   "lavorazioni/taglio-laser": {
-    "width": 3840,
-    "height": 2160,
+    "width": 2400,
+    "height": 1350,
     "widths": [
       480,
       800,
@@ -253,30 +265,29 @@
     "color": "rgb(24 24 24)",
     "alt": "Taglio laser di una lamiera",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Cemrecan Yurtman su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/CxGLY283rWs",
     "focus": "50% 50%"
   },
   "lavorazioni/officina": {
-    "width": 2333,
-    "height": 3500,
+    "width": 1600,
+    "height": 2400,
     "widths": [
       480,
       800,
       1200,
-      1600,
-      2333
+      1600
     ],
     "color": "rgb(8 24 24)",
-    "alt": "Interno di un'officina con un tornio vicino alla finestra",
+    "alt": "Interno di un’officina con un tornio vicino alla finestra",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "Marian Cosnete su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/27348514/",
     "focus": "50% 50%"
   },
   "settori/subacquea": {
-    "width": 4096,
-    "height": 3072,
+    "width": 2400,
+    "height": 1800,
     "widths": [
       480,
       800,
@@ -287,47 +298,46 @@
     "color": "rgb(8 24 40)",
     "alt": "Un apneista scende nel blu tra i raggi di luce",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Chase Baker su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/RTtUA2iBwRw",
     "focus": "50% 45%"
   },
   "settori/subacquea-apnea": {
-    "width": 2790,
-    "height": 3488,
+    "width": 1920,
+    "height": 2400,
     "widths": [
       480,
       800,
       1200,
       1600,
-      2400
+      1920
     ],
     "color": "rgb(40 56 72)",
     "alt": "Sagoma di un apneista che risale verso la luce",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Ibrahim Mohamed su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/DT4S4fCze9s",
     "focus": "50% 40%"
   },
   "settori/neve": {
-    "width": 2332,
-    "height": 3500,
+    "width": 1599,
+    "height": 2400,
     "widths": [
       480,
       800,
       1200,
-      1600,
-      2332
+      1599
     ],
     "color": "rgb(184 184 200)",
-    "alt": "Tracciato di gara visto dall'alto, segnato dalle porte di slalom",
+    "alt": "Tracciato di gara visto dall’alto, segnato dalle porte di slalom",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "Marcelo Gonzalez su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/39439688/",
     "focus": "50% 50%"
   },
   "settori/soccorso": {
-    "width": 6000,
-    "height": 4000,
+    "width": 2400,
+    "height": 1600,
     "widths": [
       480,
       800,
@@ -338,13 +348,13 @@
     "color": "rgb(40 24 8)",
     "alt": "Manichette antincendio arrotolate con i raccordi metallici",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Kjell Brandweerfotos.nl su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/OhipBwuII2I",
     "focus": "50% 50%"
   },
   "settori/difesa": {
-    "width": 6048,
-    "height": 4032,
+    "width": 2400,
+    "height": 1600,
     "widths": [
       480,
       800,
@@ -355,30 +365,29 @@
     "color": "rgb(8 8 8)",
     "alt": "Mani che controllano la misura di un pezzo metallico con il calibro",
     "origin": "illustrativa",
-    "credit": "Pexels · Licenza Pexels",
+    "credit": "Engin Akyurt su Pexels · Licenza Pexels",
     "sourceUrl": "https://www.pexels.com/photo/3621231/",
     "focus": "50% 50%"
   },
   "settori/cererie": {
-    "width": 3748,
-    "height": 5623,
+    "width": 1600,
+    "height": 2400,
     "widths": [
       480,
       800,
       1200,
-      1600,
-      2400
+      1600
     ],
     "color": "rgb(8 8 8)",
     "alt": "Candele accese su un candelabro in ottone",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Dmytro Vynohradov su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/WrL6kj_HVgo",
     "focus": "50% 55%"
   },
   "settori/industria": {
-    "width": 3600,
-    "height": 2828,
+    "width": 2400,
+    "height": 1885,
     "widths": [
       480,
       800,
@@ -387,15 +396,15 @@
       2400
     ],
     "color": "rgb(8 8 8)",
-    "alt": "Molle in filo d'acciaio in primo piano",
+    "alt": "Molle in filo d’acciaio in primo piano",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Random Thinking su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/MrjCNYLcTpQ",
     "focus": "50% 50%"
   },
   "luoghi/lecco": {
-    "width": 5658,
-    "height": 3772,
+    "width": 2400,
+    "height": 1600,
     "widths": [
       480,
       800,
@@ -406,13 +415,13 @@
     "color": "rgb(104 168 200)",
     "alt": "Il lungolago di Lecco e le montagne alle spalle",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Mathias Reding su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/wSr2HkPlirs",
     "focus": "50% 50%"
   },
   "luoghi/lago": {
-    "width": 6000,
-    "height": 4001,
+    "width": 2400,
+    "height": 1600,
     "widths": [
       480,
       800,
@@ -421,9 +430,9 @@
       2400
     ],
     "color": "rgb(104 168 184)",
-    "alt": "Il lago di Lecco visto dai Piani d'Erna",
+    "alt": "Il lago di Lecco visto dai Piani d’Erna",
     "origin": "illustrativa",
-    "credit": "Unsplash · Licenza Unsplash",
+    "credit": "Stan Sychevskyi su Unsplash · Licenza Unsplash",
     "sourceUrl": "https://unsplash.com/photos/gerJ958P7mg",
     "focus": "50% 50%"
   }

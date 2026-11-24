@@ -28,17 +28,17 @@ export const capabilities: Capability[] = [
     what:
       "Produciamo minuteria e particolari metallici a partire dal tuo disegno o dal campione che vuoi riprodurre e migliorare. Lavoriamo acciaio inox, alluminio e titanio.",
     value:
-      "Hai un fornitore che parte dal tuo progetto, non un catalogo a cui adattarlo. Il pezzo è fatto per l’applicazione, non il contrario.",
+      "Il pezzo è fatto per l’applicazione, non il contrario.",
   },
   {
     slug: "lavorazioni-metalliche",
     name: "Lavorazioni metalliche",
-    short: "Dal filo e dalla lamiera al pezzo finito, con macchine tradizionali e a controllo numerico.",
+    short: "Dal filo e dalla lamiera al pezzo, con macchine a controllo numerico e laser.",
     image: "lavorazioni/metallo",
     what:
-      "In officina lavoriamo il metallo con macchine tradizionali e a controllo numerico: torni e frese CNC, taglio laser, piegatura e stampaggio a freddo di filo e lamiera.",
+      "In officina: tornitura e fresatura CNC, taglio laser, piegatura e stampaggio a freddo di filo e lamiera. Per le finiture superficiali lavoriamo con partner di fiducia.",
     value:
-      "Più lavorazioni sotto lo stesso tetto significano meno passaggi tra fornitori e un unico interlocutore che conosce il pezzo dall’inizio alla fine.",
+      "Più lavorazioni sotto lo stesso tetto significano meno passaggi tra fornitori e tempi più facili da governare.",
     details: ["Tornitura e fresatura CNC", "Taglio laser", "Stampaggio a freddo di filo e lamiera", "Piegatura del filo"],
   },
   {
@@ -46,20 +46,20 @@ export const capabilities: Capability[] = [
     name: "Marcatura e personalizzazione",
     short: "Loghi, marchi e scritte impressi direttamente sul metallo.",
     image: "lavorazioni/marcatura",
-    archive: { id: "archivio/piastra-marcata", caption: "Piastra con il marchio inciso al laser" },
+    archive: { id: "archivio/piastra-marcata", caption: "Piastra per la subacquea, marcata al laser" },
     what:
-      "Con la marcatura laser imprimiamo sul componente loghi, marchi, scritte e codici. Il segno fa parte del pezzo: non è un’etichetta applicata dopo.",
+      "Con un sistema di marcatura laser a controllo numerico imprimiamo loghi, marchi, scritte e codici sui nostri componenti e su pezzi forniti dai clienti, dal singolo esemplare alla serie. Il segno è permanente e fa parte del pezzo.",
     value:
       "Il tuo marchio sul componente che monti, la tracciabilità di un codice, un’indicazione d’uso che resta leggibile nel tempo.",
   },
   {
     slug: "colorazione",
     name: "Colorazione",
-    short: "Il colore entra nel materiale invece di restare in superficie.",
+    short: "Componenti colorati per distinguere modelli, misure o marchi.",
     image: "lavorazioni/colore",
     archive: { id: "archivio/anelli-colorati", caption: "Anelli colorati in rosso e azzurro" },
     what:
-      "Offriamo componenti colorati con tecniche che fanno penetrare il colore direttamente nel materiale, invece di depositarlo in superficie come una vernice.",
+      "Forniamo componenti colorati, come gli anelli in filo del nostro archivio, con tecniche in cui il colore penetra nel materiale invece di restare in superficie. Scegliamo con te la soluzione adatta al metallo e all’uso.",
     value:
       "Un colore che distingue un modello, una misura o un marchio, e che fa parte del pezzo come la sua forma.",
   },
@@ -71,6 +71,6 @@ export const capabilities: Capability[] = [
     what:
       "Molte richieste arrivano senza un disegno definitivo: un’idea, un problema, un componente che non funziona come dovrebbe. Partiamo da lì e definiamo insieme forma, materiale e lavorazioni.",
     value:
-      "Non devi arrivare con tutte le risposte. Ti serve qualcuno che sappia fare le domande giuste sul pezzo e su come verrà usato.",
+      "Puoi partire anche da un’idea incompleta: a definirla ci pensiamo insieme, pezzo per pezzo.",
   },
 ];

@@ -1,3 +1,4 @@
+import { OriginTag } from "@/components/OriginTag";
 import { Picture } from "@/components/Picture";
 import { Button } from "@/components/ui/Button";
 import { Dimension } from "@/components/ui/Dimension";
@@ -29,13 +30,13 @@ export function Hero() {
 
         <div className={styles.copy}>
           <p className={`lede ${styles.lede}`}>
-            Ci porti un’esigenza, un problema tecnico o solo un’idea. Da quasi un secolo, a Olginate, la trasformiamo
-            insieme a te in un componente metallico fatto su misura.
+            Ci porti un’esigenza, un problema tecnico o solo un’idea: la trasformiamo con te in un componente
+            metallico su misura. Alle spalle, quasi un secolo di lavorazione dei metalli in famiglia.
           </p>
           <div className={styles.actions}>
             <Button href="/contatti/">Parliamo del tuo progetto</Button>
             <Button href="/azienda/" variant="text">
-              Scopri la nostra storia
+              Da Mario a Roberto: la storia
             </Button>
           </div>
         </div>
@@ -49,6 +50,7 @@ export function Hero() {
               fill
               className={styles.picture}
             />
+            <OriginTag id="hero/pezzo" />
           </div>
           <Dimension label="Su misura" className={styles.dimX} />
           <Dimension label="Dall’idea al pezzo" vertical className={styles.dimY} />

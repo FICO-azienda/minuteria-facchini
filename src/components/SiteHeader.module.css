@@ -20,6 +20,11 @@
   transform: translateY(-100%);
 }
 
+/* Se il focus da tastiera entra nell'header, l'header torna visibile */
+.header:focus-within {
+  transform: none;
+}
+
 .header[data-open] {
   background: var(--paper);
 }

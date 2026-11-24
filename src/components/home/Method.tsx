@@ -10,15 +10,15 @@ export function Method() {
       <div className="wrap">
         <SectionHead
           id="method-title"
-          index="05"
-          label="Metodo"
+          index="04"
+          label="Approccio"
           title={[
             <>Come nasce</>,
             <>
               un pezzo <em>su misura.</em>
             </>,
           ]}
-          intro={<p>Quattro passaggi, sempre gli stessi. Cambia il pezzo, non l’attenzione.</p>}
+          intro={<p>Quattro fasi, dalla prima telefonata al componente in uso.</p>}
         />
 
         <div className={styles.ruler} data-reveal="ruler">

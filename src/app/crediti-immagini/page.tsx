@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import { LegalPage } from "@/components/layout/LegalPage";
 import images from "@/content/images.generated.json";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Crediti immagini",
-  description: "Provenienza e licenza delle fotografie usate sul sito di Minuteria Facchini.",
-  alternates: { canonical: "/crediti-immagini/" },
-  robots: { index: false, follow: true },
-};
+  description:
+    "Provenienza e licenza delle fotografie usate sul sito di Minuteria Facchini.",
+  path: "/crediti-immagini/",
+  index: false,
+});
 
 type Entry = { alt: string; origin: string; credit: string | null; sourceUrl: string | null };
 

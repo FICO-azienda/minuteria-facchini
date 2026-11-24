@@ -4,7 +4,7 @@ import styles from "./not-found.module.css";
 
 export const metadata: Metadata = {
   title: "Pagina non trovata",
-  robots: { index: false },
+  alternates: { canonical: null },
 };
 
 export default function NotFound() {

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { PageHero } from "@/components/layout/PageHero";
 import { site } from "@/lib/site";
 import styles from "./contatti.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Contatti",
   description:
     "Hai un componente metallico da realizzare? Raccontaci la tua esigenza e allega il tuo disegno tecnico. Minuteria Facchini, Via dell’Industria 2, Olginate (LC).",
-  alternates: { canonical: "/contatti/" },
-};
+  path: "/contatti/",
+});
 
 export default function ContattiPage() {
   const c = site.contact;
@@ -28,8 +29,8 @@ export default function ContattiPage() {
         ]}
         lede={
           <p>
-            Un disegno, uno schizzo o poche righe: qualsiasi punto di partenza va bene. Ti risponde direttamente
-            l’azienda.
+            Un disegno, uno schizzo o poche righe: qualsiasi punto di partenza va bene. Ogni richiesta la legge una
+            persona dell’azienda.
           </p>
         }
       />

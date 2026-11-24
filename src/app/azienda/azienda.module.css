@@ -82,7 +82,7 @@
 
 .portrait figcaption :global(.label) {
   color: var(--copper);
-  font-size: 0.64rem;
+  font-size: 0.7rem;
 }
 
 /* Capitolo del mare: metà immagine, metà testo, a tutta larghezza */

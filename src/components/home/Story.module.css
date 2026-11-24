@@ -59,7 +59,7 @@
 
 .caption :global(.label) {
   color: var(--copper);
-  font-size: 0.64rem;
+  font-size: 0.7rem;
 }
 
 .portrait .caption :global(.label) {

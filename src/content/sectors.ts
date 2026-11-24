@@ -25,13 +25,16 @@ export const sectors: Sector[] = [
     key: "subacquea",
     slug: "subacquea",
     name: "Subacquea",
-    short: "Componenti per l’immersione e la pesca in apnea. Il settore che ci ha portato sui mercati internazionali.",
+    short: "Componenti per l’immersione e la pesca in apnea, nati da una passione di famiglia.",
     image: "settori/subacquea",
-    archive: [{ id: "archivio/piastra-marcata", caption: "Piastra in metallo con marcatura laser" }],
+    archive: [
+      { id: "archivio/piastra-acqua", caption: "Piastra per l’attrezzatura subacquea, versione nera" },
+      { id: "archivio/piastra-marcata", caption: "La stessa piastra in acciaio, marcata al laser" },
+    ],
     application:
-      "Componenti in acciaio per attrezzature da immersione e da pesca subacquea. È nato da una passione di Roberto Facchini ed è diventato il settore che ci ha aperto i mercati internazionali.",
+      "Componenti in acciaio per attrezzature da immersione e da pesca subacquea. La linea nasce dalla passione di Roberto Facchini e, dopo una fiera del settore a Miami, diventa stabile: è nel catalogo dell’azienda almeno dal 2007.",
     transfer:
-      "Pezzi che lavorano in acqua salata, sotto carico, nelle mani di chi non può permettersi un guasto: lo stesso rigore serve ovunque un componente debba resistere e durare.",
+      "Pezzi che lavorano in acqua salata e sotto carico: materiale e lavorazione si scelgono pensando a dove il componente dovrà durare.",
   },
   {
     key: "neve",
@@ -51,9 +54,9 @@ export const sectors: Sector[] = [
     short: "Componenti per attrezzature destinate ai vigili del fuoco.",
     image: "settori/soccorso",
     application:
-      "Componenti per attrezzature utilizzate dai vigili del fuoco, in condizioni in cui non c’è margine per un pezzo che non funziona.",
+      "Componenti per attrezzature utilizzate dai vigili del fuoco.",
     transfer:
-      "Quando un componente fa parte di un’attrezzatura di sicurezza, la costanza da un pezzo all’altro conta quanto il disegno.",
+      "In un’attrezzatura di sicurezza conta che ogni pezzo sia uguale al precedente: la costanza della produzione vale quanto il disegno.",
   },
   {
     key: "difesa",
@@ -64,7 +67,7 @@ export const sectors: Sector[] = [
     application:
       "Componentistica destinata ad attrezzature e applicazioni in ambito militare, realizzata secondo le specifiche del committente.",
     transfer:
-      "Specifiche rigorose, documentazione e riservatezza: un modo di lavorare che portiamo anche nelle commesse di altri settori.",
+      "Si lavora sulle specifiche del committente, con la riservatezza che questo settore richiede.",
   },
   {
     key: "cererie",
@@ -77,7 +80,7 @@ export const sectors: Sector[] = [
       { id: "archivio/carboncini", caption: "Carboncini per turibolo" },
     ],
     application:
-      "Da più di mezzo secolo lavoriamo con le cererie: fermagli metallici per gli stoppini delle candele, carboncini per turibolo prodotti in un reparto dedicato e incensi selezionati.",
+      "Già nel 2011 l’azienda produceva carboncini per turibolo da oltre cinquant’anni. Per le cererie realizziamo anche i fermagli metallici per gli stoppini e selezioniamo incensi.",
     transfer:
       "Restare per decenni in un settore tradizionale significa produrre con costanza lo stesso pezzo, lotto dopo lotto, senza che nessuno debba più pensarci.",
   },
@@ -85,13 +88,13 @@ export const sectors: Sector[] = [
     key: "industria",
     slug: "altre-applicazioni",
     name: "Altre industrie",
-    short: "Macchine tessili, illuminazione, occhialeria, pelletteria e molto altro.",
+    short: "Macchine tessili, illuminazione, occhialeria, pelletteria.",
     image: "settori/industria",
     archive: [{ id: "archivio/anelli", caption: "Anelli e maglie a D in filo piegato" }],
     application:
-      "Nel tempo abbiamo realizzato accessori per macchine tessili, componenti per l’illuminazione e l’occhialeria, fibbie e minuteria in filo per la pelletteria, morsetti e particolari su disegno per l’industria.",
+      "Accessori per macchine tessili, componenti per illuminazione e occhialeria, fibbie e minuteria in filo piegato per la pelletteria, fascette, morsetti e particolari su disegno.",
     transfer:
-      "Ogni nuovo settore è stato, all’inizio, la richiesta di un singolo cliente. Il prossimo potrebbe essere il tuo.",
-    examples: ["Accessori per macchine tessili", "Illuminazione", "Occhialeria", "Pelletteria e fibbie", "Morsetti"],
+      "Cambiano le forme e le quantità, non il modo di lavorare filo, lamiera e barra.",
+    examples: ["Accessori per macchine tessili", "Illuminazione", "Occhialeria", "Pelletteria e fibbie", "Fascette e morsetti", "Ganci e portachiavi"],
   },
 ];

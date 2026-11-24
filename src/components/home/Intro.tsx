@@ -6,7 +6,7 @@ const steps = [
   {
     n: "A",
     title: "Ci arriva una domanda",
-    text: "Un disegno, uno schizzo, un campione da migliorare. A volte solo un problema che nessun pezzo a catalogo risolve.",
+    text: "Un disegno, un campione da migliorare, a volte solo un problema che nessun pezzo in commercio risolve.",
   },
   {
     n: "B",
@@ -16,7 +16,7 @@ const steps = [
   {
     n: "C",
     title: "Consegniamo il pezzo",
-    text: "Un componente metallico pensato per il lavoro che dovrà fare, non adattato da qualcos’altro.",
+    text: "Un componente metallico pensato per il lavoro che dovrà fare.",
   },
 ];
 
@@ -26,7 +26,6 @@ export function Intro() {
       <div className="wrap">
         <SectionHead
           id="intro-title"
-          index="01"
           label="Il nostro mestiere"
           title={[
             <>Il nostro catalogo</>,
@@ -37,8 +36,8 @@ export function Intro() {
           intro={
             <p>
               Minuteria Facchini produce componenti metallici su commissione. Il punto di partenza non è un codice da
-              ordinare ma un’esigenza precisa: la tua. Per questo ogni pezzo che realizziamo ha una storia
-              diversa.
+              ordinare ma un’esigenza precisa: la tua. Per questo quasi ogni pezzo che realizziamo nasce da una
+              richiesta diversa.
             </p>
           }
         />
@@ -54,7 +53,7 @@ export function Intro() {
             </li>
           ))}
         </ol>
-        <Dimension label="Un solo interlocutore, dall’inizio alla fine" className={styles.dim} />
+        <Dimension label="Dalla domanda al pezzo" className={styles.dim} />
       </div>
     </section>
   );

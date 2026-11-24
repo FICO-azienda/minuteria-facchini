@@ -3,8 +3,8 @@ import { Lines } from "./Lines";
 import styles from "./SectionHead.module.css";
 
 type Props = {
-  /** Numero di tavola, es. "02" */
-  index: string;
+  /** Numero di tavola, es. "02" (facoltativo) */
+  index?: string;
   label: string;
   /** Righe del titolo, impaginate a mano. */
   title: ReactNode[];
@@ -18,8 +18,12 @@ export function SectionHead({ index, label, title, intro, as: Tag = "h2", size =
   return (
     <div className={`grid ${styles.head}`} data-size={size}>
       <p className={`label ${styles.meta}`} data-reveal="fade">
-        <span className={styles.index}>Tav. {index}</span>
-        <span className={styles.rule} aria-hidden="true" />
+        {index ? (
+          <>
+            <span className={styles.index}>Tav. {index}</span>
+            <span className={styles.rule} aria-hidden="true" />
+          </>
+        ) : null}
         <span>{label}</span>
       </p>
       <div className={styles.body}>

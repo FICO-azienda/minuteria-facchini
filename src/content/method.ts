@@ -7,7 +7,7 @@ export const phases = [
     n: "01",
     verb: "Ascoltare",
     lead: "Comprendere l’esigenza e il contesto in cui il pezzo dovrà lavorare.",
-    text: "Prima del componente ci interessa il suo lavoro: dove verrà montato, che sforzi subirà, che cosa non ha funzionato finora. Le domande giuste all’inizio evitano i problemi alla fine.",
+    text: "Prima del componente ci interessa il suo lavoro: dove verrà montato, che sforzi subirà, che cosa non ha funzionato finora. Chiarirlo all’inizio evita i problemi alla fine.",
     ask: ["A cosa serve il componente?", "In che ambiente lavora?", "Quante unità, entro quando?"],
   },
   {
@@ -15,7 +15,7 @@ export const phases = [
     verb: "Progettare",
     lead: "Individuare insieme la soluzione più adatta.",
     text: "Valutiamo con te materiale, forma, lavorazioni e finitura. Se esiste una strada più semplice o più robusta di quella che avevi in mente, te la proponiamo.",
-    ask: ["Materiale e trattamenti", "Lavorazioni necessarie", "Marcatura e colore"],
+    ask: ["Materiale e finitura", "Lavorazioni necessarie", "Marcatura e colore"],
   },
   {
     n: "03",

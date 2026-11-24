@@ -129,9 +129,6 @@ export function SiteHeader() {
         ref={panelRef}
         className={styles.panel}
         hidden={!open}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Menu"
       >
         <nav aria-label="Principale (mobile)" className="wrap">
           <ul role="list" className={styles.panelList}>

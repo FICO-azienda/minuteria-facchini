@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/meta";
 import Link from "next/link";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Informativa privacy",
-  description: "Come Minuteria Facchini tratta i dati personali inviati tramite il sito e il modulo di contatto.",
-  alternates: { canonical: "/privacy/" },
-};
+  description:
+    "Come Minuteria Facchini tratta i dati personali inviati tramite il sito e il modulo di contatto.",
+  path: "/privacy/",
+});
 
 export default function PrivacyPage() {
   const c = site.contact;
@@ -67,7 +69,7 @@ export default function PrivacyPage() {
       <h2>Chi può vederli</h2>
       <p>
         I dati sono trattati da persone autorizzate dell’azienda e dai fornitori dei servizi informatici necessari
-        (ospitalità del sito, servizio di ricezione del modulo, posta elettronica), che agiscono come responsabili del
+        (hosting del sito, servizio di ricezione del modulo, posta elettronica), che agiscono come responsabili del
         trattamento. Non vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.
       </p>
 
