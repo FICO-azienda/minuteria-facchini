@@ -5,10 +5,10 @@ configurare con il cliente prima di comunicarlo come sito ufficiale.
 
 ## Da configurare
 
-- [ ] **Modulo contatti**: creare l'endpoint (es. Formspree con piano che
-  supporta gli allegati, Basin, Getform o una funzione serverless) e impostare
-  la variabile di repository `FORM_ENDPOINT`. Senza endpoint il modulo funziona
-  in modalità ripiego: prepara una email già compilata. Vedi README.
+- [ ] **Modulo contatti** (FormSubmit, già integrato): impostare la variabile
+  di repository `FORMSUBMIT_ID` con l'indirizzo destinatario, fare un invio di
+  prova, cliccare la mail di attivazione e sostituire l'indirizzo con l'alias
+  fornito da FormSubmit. Procedura nel README.
 - [ ] **Casella email**: verificare che info@facchinimario.it riceva ancora
   posta (il dominio ha i record MX attivi, ma la casella non è stata testata).
 - [ ] **Dominio**: decidere se pubblicare il sito su facchinimario.it (oggi in

@@ -70,12 +70,14 @@ export default function PrivacyPage() {
       <p>
         I dati sono trattati da persone autorizzate dell’azienda e dai fornitori dei servizi informatici necessari
         (hosting del sito, servizio di ricezione del modulo, posta elettronica), che agiscono come responsabili del
-        trattamento. Non vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.
+        trattamento. Il modulo di contatto è gestito da FormSubmit (Devro LABS), che inoltra la richiesta e gli
+        allegati alla nostra casella email; secondo le sue condizioni conserva i dati del modulo per 30 giorni e non
+        conserva i file. Non vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.
       </p>
 
       <h2>Trasferimenti fuori dall’Unione europea</h2>
       <p>
-        Alcuni fornitori (ad esempio GitHub, Inc.) hanno sede negli Stati Uniti. In questi casi il trasferimento avviene
+        Alcuni fornitori (ad esempio GitHub, Inc. e il servizio di ricezione del modulo) hanno sede o server negli Stati Uniti. In questi casi il trasferimento avviene
         sulla base delle garanzie previste dal GDPR, come la decisione di adeguatezza UE-USA (Data Privacy Framework)
         o le clausole contrattuali standard approvate dalla Commissione europea.
       </p>

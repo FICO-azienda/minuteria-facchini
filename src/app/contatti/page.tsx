@@ -36,7 +36,7 @@ export default function ContattiPage() {
       />
 
       <section className={`wrap ${styles.grid}`} aria-label="Modulo e recapiti">
-        <div className={styles.formCol}>
+        <div className={styles.formCol} id="modulo">
           <h2 className={styles.colTitle}>
             <span className="label">Modulo di richiesta</span>
           </h2>

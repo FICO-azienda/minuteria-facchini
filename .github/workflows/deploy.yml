@@ -20,9 +20,10 @@ jobs:
     env:
       NEXT_PUBLIC_BASE_PATH: /minuteria-facchini
       NEXT_PUBLIC_SITE_URL: https://fico-azienda.github.io/minuteria-facchini
-      # Endpoint del modulo contatti (es. https://formspree.io/f/xxxxxx).
+      # Destinatario del modulo contatti su FormSubmit: indirizzo email oppure
+      # l'alias che FormSubmit fornisce dopo l'attivazione.
       # Si imposta in Settings → Secrets and variables → Actions → Variables.
-      NEXT_PUBLIC_FORM_ENDPOINT: ${{ vars.FORM_ENDPOINT }}
+      NEXT_PUBLIC_FORMSUBMIT_ID: ${{ vars.FORMSUBMIT_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

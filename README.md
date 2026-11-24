@@ -55,32 +55,38 @@ in `assets-source/azienda/`, aggiornare la voce in `selection.json` (`src`,
 
 ## Modulo contatti
 
-GitHub Pages ospita solo file statici, quindi il modulo invia i dati
-(`multipart/form-data`, allegati compresi) a un servizio esterno indicato da una
-variabile d'ambiente:
+GitHub Pages ospita solo file statici: il modulo è inviato a
+**[FormSubmit](https://formsubmit.co)** (gratuito, nessun account) con un normale
+POST `multipart/form-data`, il metodo che FormSubmit documenta per gli allegati.
+Dopo l'invio FormSubmit rimanda a `/contatti/?inviato=1`, dove compare la conferma.
 
-```
-NEXT_PUBLIC_FORM_ENDPOINT=https://…
-```
+**Attivazione (una volta sola):**
 
-- Il valore è un **URL pubblico** (non una chiave segreta): va impostato su GitHub
-  in *Settings → Secrets and variables → Actions → Variables* con nome
-  `FORM_ENDPOINT`. Il workflow di deploy lo passa alla build.
-- Servizi compatibili senza modifiche al codice (rispondono a `Accept: application/json`):
-  **Formspree** (gli allegati richiedono un piano a pagamento), **Basin**,
-  **Getform**, oppure una funzione serverless propria (Cloudflare Workers,
-  Netlify Functions, Supabase Edge Functions) che valida i dati e li inoltra via email.
-- Il servizio scelto deve: limitare dimensione e tipo degli allegati anche lato
-  server, filtrare lo spam, conservare i dati in UE o con garanzie adeguate
-  (va citato nell'informativa privacy).
+1. Impostare su GitHub la variabile di repository `FORMSUBMIT_ID`
+   (*Settings → Secrets and variables → Actions → Variables*) con l'indirizzo
+   destinatario, es. `info@facchinimario.it`. Il workflow la passa alla build
+   come `NEXT_PUBLIC_FORMSUBMIT_ID`. Rilanciare il deploy (*Actions → Deploy → Run workflow*).
+2. Inviare una richiesta di prova dal sito pubblicato: FormSubmit manda una mail
+   di attivazione al destinatario. Cliccare il link di conferma.
+3. Nella mail di conferma FormSubmit fornisce anche un **alias casuale**:
+   sostituire l'indirizzo nella variabile `FORMSUBMIT_ID` con l'alias, così
+   l'email non compare nel codice della pagina. Rilanciare il deploy.
 
-**Finché l'endpoint non è configurato** il modulo valida comunque i campi e, all'invio,
-prepara un'email già compilata verso l'indirizzo aziendale (l'allegato va aggiunto a
-mano). Nessuna richiesta va persa, ma la soluzione definitiva è l'endpoint.
+Campi speciali già impostati: `_subject` (con nome o azienda), `_template=table`,
+`_captcha=false` (l'anti-spam è affidato al campo nascosto `_honey`), `_next`.
+L'allegato si chiama `attachment`; i file trascinati nell'area di caricamento
+vengono rimessi nel campo prima dell'invio.
 
-Validazioni lato browser: campi obbligatori, formato email, massimo 3 allegati da
-10 MB ciascuno (PDF, DWG, DXF, STEP/STP, IGES/IGS, JPG, PNG, ZIP), consenso privacy
-obbligatorio, campo nascosto anti-spam (honeypot).
+Validazioni lato browser: campi obbligatori, formato email, massimo 3 allegati
+e 10 MB in tutto (limite di FormSubmit, che inoltra i file via email), formati
+PDF, DWG, DXF, STEP/STP, IGES/IGS, JPG, PNG, ZIP, consenso privacy obbligatorio.
+
+**Finché `FORMSUBMIT_ID` non è impostata** il modulo valida comunque i campi e
+prepara un'email già compilata verso l'indirizzo aziendale (l'allegato va
+aggiunto a mano).
+
+Per cambiare servizio (Formspree, funzione serverless propria…) basta
+modificare `ACTION` e i campi nascosti in `src/components/contact/ContactForm.tsx`.
 
 ## Deploy
 
@@ -91,7 +97,7 @@ pubblica su GitHub Pages. Le variabili usate in build:
 | --- | --- | --- |
 | `NEXT_PUBLIC_BASE_PATH` | `/minuteria-facchini` | workflow (togliere con un dominio proprio) |
 | `NEXT_PUBLIC_SITE_URL` | `https://fico-azienda.github.io/minuteria-facchini` | workflow (URL canonico, sitemap, Open Graph) |
-| `NEXT_PUBLIC_FORM_ENDPOINT` | endpoint del modulo | variabile di repository `FORM_ENDPOINT` |
+| `NEXT_PUBLIC_FORMSUBMIT_ID` | destinatario o alias FormSubmit | variabile di repository `FORMSUBMIT_ID` |
 
 **Con un dominio proprio** (es. `www.minuteriafacchini.it`): aggiungere il dominio in
 *Settings → Pages*, impostare `NEXT_PUBLIC_BASE_PATH` vuoto e `NEXT_PUBLIC_SITE_URL`
