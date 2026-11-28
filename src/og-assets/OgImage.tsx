@@ -1,6 +1,6 @@
-// Sorgente di public/og.png. Per rigenerarla: copiare questo file in
+// Sorgente di public/og.jpg. Per rigenerarla: copiare questo file in
 // src/app/opengraph-image.tsx, avviare npm run dev, salvare
-// http://localhost:3000/opengraph-image come public/og.png e rimuovere la copia.
+// http://localhost:3000/opengraph-image/, convertirla in public/og.jpg e rimuovere la copia.
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ImageResponse } from "next/og";
@@ -23,20 +23,20 @@ export default async function OgImage() {
 
   return new ImageResponse(
     (
-      <div style={{ display: "flex", width: "100%", height: "100%", background: "#eee8dc", color: "#1b1e1b" }}>
+      <div style={{ display: "flex", width: "100%", height: "100%", background: "#f3f4f2", color: "#151a1c" }}>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "56px 60px", width: 680 }}>
-          <div style={{ display: "flex", fontFamily: "Plex", fontSize: 17, letterSpacing: 3, color: "#5e584d" }}>
-            <span style={{ color: "#a34825", marginRight: 16 }}>TAV. 00</span>MINUTERIA FACCHINI · OLGINATE (LC)
+          <div style={{ display: "flex", fontFamily: "Plex", fontSize: 17, letterSpacing: 3, color: "#53595b" }}>
+            <span style={{ color: "#9c4322", marginRight: 16 }}>TAV. 00</span>MINUTERIA FACCHINI · OLGINATE (LC)
           </div>
           <div style={{ display: "flex", flexDirection: "column", fontFamily: "Archivo", fontSize: 84, lineHeight: 1, letterSpacing: -3.5 }}>
             <span>Il pezzo che</span>
             <span style={{ display: "flex" }}>
-              <span style={{ fontFamily: "Newsreader", color: "#a34825", marginRight: 22, letterSpacing: -2 }}>ancora</span>
+              <span style={{ fontFamily: "Newsreader", color: "#9c4322", marginRight: 22, letterSpacing: -2 }}>ancora</span>
               non
             </span>
             <span>esiste.</span>
           </div>
-          <div style={{ display: "flex", fontFamily: "Plex", fontSize: 17, letterSpacing: 2, color: "#5e584d" }}>
+          <div style={{ display: "flex", fontFamily: "Plex", fontSize: 17, letterSpacing: 2, color: "#53595b" }}>
             COMPONENTI METALLICI SU MISURA
           </div>
         </div>

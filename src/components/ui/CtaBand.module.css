@@ -21,7 +21,7 @@
   width: min(54vw, 720px);
   height: auto;
   transform: translateY(-50%);
-  color: rgb(238 232 220 / 0.09);
+  color: rgb(243 244 242 / 0.09);
   pointer-events: none;
 }
 

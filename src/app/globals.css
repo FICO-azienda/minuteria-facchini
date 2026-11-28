@@ -1,26 +1,25 @@
 /* ==========================================================================
    Minuteria Facchini — sistema visivo
    Concept: "Tavola tecnica". Il sito è impaginato come un disegno tecnico:
-   carta avorio, inchiostro, quote, cartigli. Il rame e la sua patina verde
-   sono i due stati dello stesso metallo: materia e tempo.
+   carta bianca, inchiostro, quote, cartigli. Il petrolio è il colore
+   delle superfici scure, il rame quello degli accenti.
    ========================================================================== */
 
 :root {
   /* Colore */
-  --paper: #eee8dc;
-  --paper-deep: #e3dbcb;
-  --ink: #1b1e1b;
-  --ink-soft: #5e584d;
-  --oxide: #1e2d27;
-  --oxide-deep: #151f1b;
-  --copper: #9c4322; /* testo/link: 5.3:1 su carta, 4.7:1 su carta scura */
-  --copper-strong: #9c4322; /* fondo pulsanti con testo carta: 5.3:1 */
-  --copper-glow: #e08a62; /* accento su fondo ossido: 5.5:1 */
-  --patina: #93b5a2;
-  --sand: #c9bfa9;
-  --line: rgb(27 30 27 / 0.16);
-  --line-strong: rgb(27 30 27 / 0.42);
-  --line-on-dark: rgb(238 232 220 / 0.16);
+  --paper: #f3f4f2; /* bianco grigio neutro, niente toni caldi */
+  --paper-deep: #e4e7e5;
+  --ink: #151a1c;
+  --ink-soft: #53595b; /* 6.5:1 su carta, 5.7:1 su carta scura */
+  --oxide: #0f4b57; /* petrolio: carta 8.8:1 */
+  --oxide-deep: #0a353e;
+  --copper: #9c4322; /* testo/link: 5.9:1 su carta, 5.2:1 su carta scura */
+  --copper-strong: #9c4322; /* fondo pulsanti con testo carta: 5.9:1 */
+  --copper-glow: #f0a983; /* accento su fondo petrolio: 5:1 */
+  --sand: #b4c7ca; /* testo secondario su petrolio: 5.5:1 */
+  --line: rgb(21 26 28 / 0.15);
+  --line-strong: rgb(21 26 28 / 0.42);
+  --line-on-dark: rgb(243 244 242 / 0.18);
 
   /* Tipografia (variabili impostate da next/font nel layout) */
   --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
@@ -332,7 +331,7 @@ p {
   bottom: 10px;
   z-index: 2;
   padding: 4px 8px 3px;
-  background: rgb(27 30 27 / 0.84);
+  background: rgb(21 26 28 / 0.84);
   color: var(--paper);
   font-family: var(--font-mono);
   font-size: 0.68rem;

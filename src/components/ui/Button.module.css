@@ -62,7 +62,7 @@
 }
 
 .solid .arrow {
-  background: rgb(238 232 220 / 0.16);
+  background: rgb(243 244 242 / 0.16);
 }
 
 .ghost {
@@ -85,11 +85,11 @@
 }
 
 .ghost:hover .arrow {
-  border-color: rgb(238 232 220 / 0.3);
+  border-color: rgb(243 244 242 / 0.3);
 }
 
 :global(.on-dark) .ghost {
-  border-color: rgb(238 232 220 / 0.38);
+  border-color: rgb(243 244 242 / 0.38);
 }
 
 :global(.on-dark) .ghost::before {

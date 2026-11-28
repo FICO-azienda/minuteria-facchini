@@ -4,7 +4,7 @@
 
 Ogni componente di Minuteria Facchini nasce su un foglio: un'esigenza del
 cliente che diventa disegno, poi pezzo. Il sito è impaginato come una tavola
-di disegno tecnico: carta avorio, inchiostro, linee di quota, il cartiglio
+di disegno tecnico: carta bianca, inchiostro, linee di quota, il cartiglio
 nell'angolo. Sopra questo foglio appoggiamo la materia — fotografie grandi,
 dettagli di metallo — e la voce delle persone che lo lavorano.
 
@@ -22,35 +22,36 @@ componente. Il sito non mostra un catalogo, mostra un modo di lavorare.
 
 ## Posizionamento visivo
 
-- **Non** il sito industriale blu-grigio-bianco, **non** il template AI con
+- **Non** il sito industriale con il blu aziendale di serie, **non** il template AI con
   gradienti e card tutte uguali.
 - Solidità da grande gruppo (impaginazione ampia, titoli grandi, ritmo
   lento, fotografia protagonista) con la sensibilità di uno studio di design
   (spazi generosi, tipografia curata, dettagli grafici ispirati al disegno
   tecnico).
-- Calore di un'azienda di famiglia: carta al posto del bianco ottico,
-  corsivo per la voce umana, immagini d'archivio presentate con didascalia.
+- Calore di un'azienda di famiglia affidato al corsivo per la voce umana e
+  alle immagini d'archivio presentate con didascalia, non al colore del fondo.
 
-## Palette — "materia e tempo"
+## Palette — "petrolio e rame"
 
-Il rame e la sua patina verde sono due stati dello stesso metallo: il colore
-del metallo appena lavorato e quello che acquista con gli anni. La palette
-racconta la stessa cosa dell'azienda: lavorazione e storia.
+Fondo bianco grigio neutro, senza toni caldi: la prima versione su carta
+avorio risultava troppo «da template» (revisione del 28/11/2026). Le superfici
+scure sono color petrolio; il rame resta l'accento.
 
 | Token | Hex | Uso | Contrasto |
 | --- | --- | --- | --- |
-| `--paper` Carta | `#EEE8DC` | fondo principale (carta da disegno) | — |
-| `--paper-deep` Carta scura | `#E3DBCB` | superfici secondarie, campi | — |
-| `--ink` Inchiostro | `#1B1E1B` | testo, linee | 13,8:1 su carta |
-| `--ink-soft` Grafite | `#5E584D` | testo secondario | 5,8:1 su carta |
-| `--oxide` Verde ossido | `#1E2D27` | sezioni scure (storia, CTA finale) | carta su ossido 11,8:1 |
-| `--copper` Rame | `#A34825` | link e accenti su carta | 4,9:1 su carta |
-| `--copper-strong` Rame pieno | `#9C4322` | fondo pulsanti principali | carta su rame 5,3:1 |
-| `--copper-glow` Rame chiaro | `#E08A62` | accenti su fondo ossido | 5,5:1 su ossido |
-| `--patina` Patina | `#93B5A2` | dettagli minimi su fondo scuro | 6,4:1 su ossido |
+| `--paper` Carta | `#F3F4F2` | fondo principale | — |
+| `--paper-deep` Carta scura | `#E4E7E5` | superfici secondarie, campi | — |
+| `--ink` Inchiostro | `#151A1C` | testo, linee | 15,9:1 su carta |
+| `--ink-soft` Grafite | `#53595B` | testo secondario | 6,5:1 su carta, 5,7:1 su carta scura |
+| `--oxide` Petrolio | `#0F4B57` | sezioni scure (storia, CTA finale, piè di pagina) | carta su petrolio 8,8:1 |
+| `--oxide-deep` Petrolio scuro | `#0A353E` | riservato a fondi più scuri | — |
+| `--copper` Rame | `#9C4322` | link e accenti su carta | 5,9:1 su carta |
+| `--copper-strong` Rame pieno | `#9C4322` | fondo pulsanti principali | carta su rame 5,9:1 |
+| `--copper-glow` Rame chiaro | `#F0A983` | accenti su fondo petrolio | 5,0:1 su petrolio |
+| `--sand` Grigio azzurro | `#B4C7CA` | testo secondario su petrolio | 5,5:1 su petrolio |
 
-Regola d'uso: carta e inchiostro occupano quasi tutta la superficie; il verde
-ossido scandisce i capitoli; il rame è un accento (CTA, quote, parole chiave)
+Regola d'uso: carta e inchiostro occupano quasi tutta la superficie; il
+petrolio scandisce i capitoli; il rame è un accento (CTA, quote, parole chiave)
 e non supera mai una piccola percentuale della pagina. Tutte le coppie usate
 per il testo superano WCAG AA.
 
